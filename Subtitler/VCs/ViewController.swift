@@ -9,13 +9,12 @@ import Cocoa
 import AVKit
 import SnapKit
 
-// TODO: enable timing button only if playing
-// TODO: implement save
 // TODO: show subtitles in video player
 // TODO: implement undo
 // TODO: allow text editing
-// TODO: allow text suppression
-// TODO: allow text reordering
+// TODO: add parser/Writer specs, simple thing for nilpotence on valid input file
+// TODO: ajouter choix de vitesse de player
+// TODO: selectionner plusieurs lignes et demander de mapper time End = (n-1).timeStart
 
 class ViewController: NSViewController {
 
@@ -23,15 +22,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         representedObject = representedObject ?? Subtitle()
+        tableView.registerForDraggedTypes([subtitleLineKind])
         playerView.delegate = self
         timingButton.delegate = self
-    }
-    
-    override func viewDidAppear() {
-        super.viewDidAppear()
-        if subtitleURL == nil {
-            //openSubtitle(sender: nil)
-        }
     }
 
     override var representedObject: Any? {
@@ -49,11 +42,13 @@ class ViewController: NSViewController {
     }
     private var timingButtonPressStart: CMTime?
     private var timingButtonPressEnd: CMTime?
+    private let subtitleLineKind = NSPasteboard.PasteboardType(rawValue: "me.syan.Subtitler.Line")
 
     // MARK: Views
     @IBOutlet private var tableView: NSTableView!
     @IBOutlet private var textfield: NSTextField!
     @IBOutlet private var playerView: PlayerView!
+    @IBOutlet private var playerControlsView: PlayerControlsView!
     @IBOutlet private var timingButton: PressButton!
 
     // MARK: Table Actions
@@ -73,6 +68,9 @@ class ViewController: NSViewController {
 
         if removedIndex - 1 >= 0 && tableView.numberOfRows > 0 {
             tableView.selectRowIndexes(IndexSet(integer: removedIndex - 1), byExtendingSelection: false)
+        }
+        else if tableView.numberOfRows > 0 {
+            tableView.selectRowIndexes(IndexSet(integer: removedIndex), byExtendingSelection: false)
         }
     }
 
@@ -221,5 +219,47 @@ extension ViewController: NSTableViewDataSource {
 extension ViewController: NSTableViewDelegate {
     func tableViewSelectionDidChange(_ notification: Notification) {
         updateTimingButton()
+    }
+
+    // https://samwize.com/2018/11/27/drag-and-drop-to-reorder-nstableview/
+    func tableView(_ tableView: NSTableView, pasteboardWriterForRow row: Int) -> NSPasteboardWriting? {
+        let pasteboardItem = NSPasteboardItem()
+        pasteboardItem.setData(try! subtitle.lines[row].asJSON(), forType: subtitleLineKind)
+        return pasteboardItem
+    }
+
+    func tableView(_ tableView: NSTableView, validateDrop info: NSDraggingInfo, proposedRow row: Int, proposedDropOperation dropOperation: NSTableView.DropOperation) -> NSDragOperation {
+       if dropOperation == .above {
+           return .move
+       } else {
+           return []
+       }
+    }
+    
+    func tableView(_ tableView: NSTableView, acceptDrop info: NSDraggingInfo, row: Int, dropOperation: NSTableView.DropOperation) -> Bool {
+        guard let item = info.draggingPasteboard.pasteboardItems?.first,
+            let data = item.data(forType: subtitleLineKind),
+            let line = try? Subtitle.Line.fromJSON(data),
+            let originalLineIndex = subtitle.lines.firstIndex(of: line)
+        else {
+            return false
+        }
+
+        var newRow = row
+
+        // When you drag an item downwards, the "new row" index is actually --1. Remember dragging operation is `.above`.
+        if originalLineIndex < newRow {
+            newRow = row - 1
+        }
+        
+        // Persist data
+        subtitle.move(from: originalLineIndex, to: newRow)
+
+        // Animate the rows
+        tableView.beginUpdates()
+        tableView.moveRow(at: originalLineIndex, to: newRow)
+        tableView.endUpdates()
+
+        return true
     }
 }

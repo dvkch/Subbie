@@ -18,6 +18,8 @@
 		974FAA7A2703223C008B539B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA792703223C008B539B /* Assets.xcassets */; };
 		9792497A2703473900248C3D /* SubRipParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979249792703473900248C3D /* SubRipParser.swift */; };
 		97924982270351FA00248C3D /* SubtitlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924981270351FA00248C3D /* SubtitlerTests.swift */; };
+		97924989270374C700248C3D /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924988270374C700248C3D /* PlayerControlsView.swift */; };
+		9792498B2703802100248C3D /* Codable+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9792498A2703802100248C3D /* Codable+SY.swift */; };
 		97FAA54F270326DE00684B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA7B2703223C008B539B /* Main.storyboard */; };
 		E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +103,7 @@
 		972CAB6927032591005E9C3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9792498A2703802100248C3D /* Codable+SY.swift */,
 				972CAB6A27032591005E9C3D /* NSTableView+SY.swift */,
 			);
 			path = Extensions;
@@ -348,6 +351,7 @@
 				97027089270339EC001B5785 /* PlayerView.swift in Sources */,
 				972CAB7327032591005E9C3D /* TimingButton.swift in Sources */,
 				972CAB7427032591005E9C3D /* ViewController.swift in Sources */,
+				9792498B2703802100248C3D /* Codable+SY.swift in Sources */,
 				974FAA782703223B008B539B /* Subtitle.swift in Sources */,
 				9702708427032EA9001B5785 /* AppError.swift in Sources */,
 			);

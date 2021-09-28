@@ -62,7 +62,7 @@ class Subtitle: NSDocument {
     }
 
     // MARK: Types
-    struct Line {
+    struct Line: Codable, Equatable {
         var text: String
         var timeStart: TimeInterval
         var timeEnd: TimeInterval
@@ -114,6 +114,14 @@ class Subtitle: NSDocument {
 
         lines[lineIndex].timeStart = start
         lines[lineIndex].timeEnd = end
+    }
+    
+    func move(from originalIndex: Int, to destinationIndex: Int) {
+        isTransient = false
+        updateChangeCount(.changeDone)
+
+        let item = lines.remove(at: originalIndex)
+        lines.insert(item, at: destinationIndex)
     }
     
     func removeLine(at index: Int) {
