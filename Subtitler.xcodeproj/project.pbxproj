@@ -17,9 +17,20 @@
 		974FAA782703223B008B539B /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA772703223B008B539B /* Subtitle.swift */; };
 		974FAA7A2703223C008B539B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA792703223C008B539B /* Assets.xcassets */; };
 		9792497A2703473900248C3D /* SubRipParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979249792703473900248C3D /* SubRipParser.swift */; };
+		97924982270351FA00248C3D /* SubtitlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924981270351FA00248C3D /* SubtitlerTests.swift */; };
 		97FAA54F270326DE00684B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA7B2703223C008B539B /* Main.storyboard */; };
 		E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97924983270351FA00248C3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 974FAA682703223B008B539B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 974FAA6F2703223B008B539B;
+			remoteInfo = Subtitler;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2D663F687E9DBD75298B2755 /* Pods-Subtitler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.debug.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.debug.xcconfig"; sourceTree = "<group>"; };
@@ -37,6 +48,8 @@
 		974FAA7E2703223C008B539B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		974FAA7F2703223C008B539B /* Subtitler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Subtitler.entitlements; sourceTree = "<group>"; };
 		979249792703473900248C3D /* SubRipParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRipParser.swift; sourceTree = "<group>"; };
+		9792497F270351F900248C3D /* SubtitlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtitlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97924981270351FA00248C3D /* SubtitlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitlerTests.swift; sourceTree = "<group>"; };
 		DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.release.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.release.xcconfig"; sourceTree = "<group>"; };
 		EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtitler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -47,6 +60,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9792497C270351F900248C3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				974FAA722703223B008B539B /* Subtitler */,
+				97924980270351F900248C3D /* SubtitlerTests */,
 				974FAA712703223B008B539B /* Products */,
 				62CB37C0F8D3311101F9052C /* Pods */,
 				1AFF3D4355275DEC7EE7851C /* Frameworks */,
@@ -127,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				974FAA702703223B008B539B /* Subtitler.app */,
+				9792497F270351F900248C3D /* SubtitlerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +168,14 @@
 				974FAA7F2703223C008B539B /* Subtitler.entitlements */,
 			);
 			path = Subtitler;
+			sourceTree = "<group>";
+		};
+		97924980270351F900248C3D /* SubtitlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				97924981270351FA00248C3D /* SubtitlerTests.swift */,
+			);
+			path = SubtitlerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +201,24 @@
 			productReference = 974FAA702703223B008B539B /* Subtitler.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9792497E270351F900248C3D /* SubtitlerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97924985270351FA00248C3D /* Build configuration list for PBXNativeTarget "SubtitlerTests" */;
+			buildPhases = (
+				9792497B270351F900248C3D /* Sources */,
+				9792497C270351F900248C3D /* Frameworks */,
+				9792497D270351F900248C3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97924984270351FA00248C3D /* PBXTargetDependency */,
+			);
+			name = SubtitlerTests;
+			productName = SubtitlerTests;
+			productReference = 9792497F270351F900248C3D /* SubtitlerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,6 +231,10 @@
 				TargetAttributes = {
 					974FAA6F2703223B008B539B = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					9792497E270351F900248C3D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 974FAA6F2703223B008B539B;
 					};
 				};
 			};
@@ -200,6 +252,7 @@
 			projectRoot = "";
 			targets = (
 				974FAA6F2703223B008B539B /* Subtitler */,
+				9792497E270351F900248C3D /* SubtitlerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +264,13 @@
 			files = (
 				974FAA7A2703223C008B539B /* Assets.xcassets in Resources */,
 				97FAA54F270326DE00684B3F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9792497D270351F900248C3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +353,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9792497B270351F900248C3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97924982270351FA00248C3D /* SubtitlerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97924984270351FA00248C3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 974FAA6F2703223B008B539B /* Subtitler */;
+			targetProxy = 97924983270351FA00248C3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		974FAA7B2703223C008B539B /* Main.storyboard */ = {
@@ -484,6 +560,54 @@
 			};
 			name = Release;
 		};
+		97924986270351FA00248C3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79RY8264V4;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.syan.SubtitlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Subtitler.app/Contents/MacOS/Subtitler";
+			};
+			name = Debug;
+		};
+		97924987270351FA00248C3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79RY8264V4;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.syan.SubtitlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Subtitler.app/Contents/MacOS/Subtitler";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,6 +625,15 @@
 			buildConfigurations = (
 				974FAA832703223C008B539B /* Debug */,
 				974FAA842703223C008B539B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97924985270351FA00248C3D /* Build configuration list for PBXNativeTarget "SubtitlerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97924986270351FA00248C3D /* Debug */,
+				97924987270351FA00248C3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
