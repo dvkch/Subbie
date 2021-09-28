@@ -9,9 +9,10 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     
-
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        _ = DocumentController.init() // force use of our subclass
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application

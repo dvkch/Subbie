@@ -7,138 +7,157 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		182B1E0B75DD00AE6222B8BF /* Pods_Subtitler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC3EA7F2C4BAAEC92241D3B /* Pods_Subtitler.framework */; };
-		9725B3F9270285C3006A140B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725B3F8270285C3006A140B /* AppDelegate.swift */; };
-		9725B3FB270285C3006A140B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725B3FA270285C3006A140B /* ViewController.swift */; };
-		9725B3FD270285C6006A140B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9725B3FC270285C6006A140B /* Assets.xcassets */; };
-		9725B400270285C6006A140B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9725B3FE270285C6006A140B /* Main.storyboard */; };
-		9725B40827028E3B006A140B /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725B40727028E3B006A140B /* Subtitle.swift */; };
-		9725B40D27029224006A140B /* NSTableView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725B40C27029224006A140B /* NSTableView+SY.swift */; };
-		977573EE2702AB6A0037AECD /* TimingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977573ED2702AB6A0037AECD /* TimingButton.swift */; };
+		9702708427032EA9001B5785 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9702708327032EA9001B5785 /* AppError.swift */; };
+		9702708727033502001B5785 /* DocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9702708627033502001B5785 /* DocumentController.swift */; };
+		97027089270339EC001B5785 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97027088270339EC001B5785 /* PlayerView.swift */; };
+		972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6A27032591005E9C3D /* NSTableView+SY.swift */; };
+		972CAB7327032591005E9C3D /* TimingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6E27032591005E9C3D /* TimingButton.swift */; };
+		972CAB7427032591005E9C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB7027032591005E9C3D /* ViewController.swift */; };
+		974FAA742703223B008B539B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA732703223B008B539B /* AppDelegate.swift */; };
+		974FAA782703223B008B539B /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA772703223B008B539B /* Subtitle.swift */; };
+		974FAA7A2703223C008B539B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA792703223C008B539B /* Assets.xcassets */; };
+		97FAA54F270326DE00684B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA7B2703223C008B539B /* Main.storyboard */; };
+		E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3CC3EA7F2C4BAAEC92241D3B /* Pods_Subtitler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtitler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9725B3F5270285C3006A140B /* Subtitler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtitler.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9725B3F8270285C3006A140B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9725B3FA270285C3006A140B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9725B3FC270285C6006A140B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9725B3FF270285C6006A140B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9725B401270285C6006A140B /* Subtitler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Subtitler.entitlements; sourceTree = "<group>"; };
-		9725B40727028E3B006A140B /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
-		9725B40C27029224006A140B /* NSTableView+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTableView+SY.swift"; sourceTree = "<group>"; };
-		977573ED2702AB6A0037AECD /* TimingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingButton.swift; sourceTree = "<group>"; };
-		CAFE530D8D64024133133648 /* Pods-Subtitler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.release.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.release.xcconfig"; sourceTree = "<group>"; };
-		E414C4B023A785FA42073476 /* Pods-Subtitler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.debug.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.debug.xcconfig"; sourceTree = "<group>"; };
+		2D663F687E9DBD75298B2755 /* Pods-Subtitler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.debug.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.debug.xcconfig"; sourceTree = "<group>"; };
+		9702708327032EA9001B5785 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		9702708627033502001B5785 /* DocumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentController.swift; sourceTree = "<group>"; };
+		97027088270339EC001B5785 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		972CAB6A27032591005E9C3D /* NSTableView+SY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTableView+SY.swift"; sourceTree = "<group>"; };
+		972CAB6E27032591005E9C3D /* TimingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingButton.swift; sourceTree = "<group>"; };
+		972CAB7027032591005E9C3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		974FAA702703223B008B539B /* Subtitler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtitler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		974FAA732703223B008B539B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		974FAA772703223B008B539B /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		974FAA792703223C008B539B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		974FAA7C2703223C008B539B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		974FAA7E2703223C008B539B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		974FAA7F2703223C008B539B /* Subtitler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Subtitler.entitlements; sourceTree = "<group>"; };
+		DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.release.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.release.xcconfig"; sourceTree = "<group>"; };
+		EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtitler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9725B3F2270285C3006A140B /* Frameworks */ = {
+		974FAA6D2703223B008B539B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182B1E0B75DD00AE6222B8BF /* Pods_Subtitler.framework in Frameworks */,
+				E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2595D3CA1DF76D61FD841E40 /* Pods */ = {
+		1AFF3D4355275DEC7EE7851C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E414C4B023A785FA42073476 /* Pods-Subtitler.debug.xcconfig */,
-				CAFE530D8D64024133133648 /* Pods-Subtitler.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		8778D8AB4587D7F689A8511D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3CC3EA7F2C4BAAEC92241D3B /* Pods_Subtitler.framework */,
+				EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9725B3EC270285C3006A140B = {
+		62CB37C0F8D3311101F9052C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9725B3F7270285C3006A140B /* Subtitler */,
-				9725B3F6270285C3006A140B /* Products */,
-				2595D3CA1DF76D61FD841E40 /* Pods */,
-				8778D8AB4587D7F689A8511D /* Frameworks */,
+				2D663F687E9DBD75298B2755 /* Pods-Subtitler.debug.xcconfig */,
+				DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */,
 			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		9725B3F6270285C3006A140B /* Products */ = {
+		97027085270334F2001B5785 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9725B3F5270285C3006A140B /* Subtitler.app */,
+				9702708627033502001B5785 /* DocumentController.swift */,
 			);
-			name = Products;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		9725B3F7270285C3006A140B /* Subtitler */ = {
+		972CAB6927032591005E9C3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9725B40B27029218006A140B /* Extensions */,
-				9725B40927028F94006A140B /* Models */,
-				977573EA27029C380037AECD /* Views */,
-				9725B40A27028F9E006A140B /* VCs */,
-				9725B3F8270285C3006A140B /* AppDelegate.swift */,
-				9725B3FC270285C6006A140B /* Assets.xcassets */,
-				9725B3FE270285C6006A140B /* Main.storyboard */,
-				9725B401270285C6006A140B /* Subtitler.entitlements */,
-			);
-			path = Subtitler;
-			sourceTree = "<group>";
-		};
-		9725B40927028F94006A140B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				9725B40727028E3B006A140B /* Subtitle.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		9725B40A27028F9E006A140B /* VCs */ = {
-			isa = PBXGroup;
-			children = (
-				9725B3FA270285C3006A140B /* ViewController.swift */,
-			);
-			path = VCs;
-			sourceTree = "<group>";
-		};
-		9725B40B27029218006A140B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9725B40C27029224006A140B /* NSTableView+SY.swift */,
+				972CAB6A27032591005E9C3D /* NSTableView+SY.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		977573EA27029C380037AECD /* Views */ = {
+		972CAB6B27032591005E9C3D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				977573ED2702AB6A0037AECD /* TimingButton.swift */,
+				9702708327032EA9001B5785 /* AppError.swift */,
+				974FAA772703223B008B539B /* Subtitle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		972CAB6D27032591005E9C3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97027088270339EC001B5785 /* PlayerView.swift */,
+				972CAB6E27032591005E9C3D /* TimingButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		972CAB6F27032591005E9C3D /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				972CAB7027032591005E9C3D /* ViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		974FAA672703223B008B539B = {
+			isa = PBXGroup;
+			children = (
+				974FAA722703223B008B539B /* Subtitler */,
+				974FAA712703223B008B539B /* Products */,
+				62CB37C0F8D3311101F9052C /* Pods */,
+				1AFF3D4355275DEC7EE7851C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		974FAA712703223B008B539B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				974FAA702703223B008B539B /* Subtitler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		974FAA722703223B008B539B /* Subtitler */ = {
+			isa = PBXGroup;
+			children = (
+				972CAB6927032591005E9C3D /* Extensions */,
+				972CAB6B27032591005E9C3D /* Models */,
+				97027085270334F2001B5785 /* Controllers */,
+				972CAB6D27032591005E9C3D /* Views */,
+				972CAB6F27032591005E9C3D /* VCs */,
+				974FAA732703223B008B539B /* AppDelegate.swift */,
+				974FAA792703223C008B539B /* Assets.xcassets */,
+				974FAA7B2703223C008B539B /* Main.storyboard */,
+				974FAA7E2703223C008B539B /* Info.plist */,
+				974FAA7F2703223C008B539B /* Subtitler.entitlements */,
+			);
+			path = Subtitler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9725B3F4270285C3006A140B /* Subtitler */ = {
+		974FAA6F2703223B008B539B /* Subtitler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9725B404270285C6006A140B /* Build configuration list for PBXNativeTarget "Subtitler" */;
+			buildConfigurationList = 974FAA822703223C008B539B /* Build configuration list for PBXNativeTarget "Subtitler" */;
 			buildPhases = (
-				977573EF2702B2670037AECD /* TODOs */,
-				0446153D0D94E434893762F1 /* [CP] Check Pods Manifest.lock */,
-				9725B3F1270285C3006A140B /* Sources */,
-				9725B3F2270285C3006A140B /* Frameworks */,
-				9725B3F3270285C3006A140B /* Resources */,
-				15C9498C31FB68C7A0C14292 /* [CP] Embed Pods Frameworks */,
+				972CAB75270325B4005E9C3D /* TODOs */,
+				4A11264A9711B98E22E06BFB /* [CP] Check Pods Manifest.lock */,
+				974FAA6C2703223B008B539B /* Sources */,
+				974FAA6D2703223B008B539B /* Frameworks */,
+				974FAA6E2703223B008B539B /* Resources */,
+				BB8A73F0AA7F023FC3296212 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,25 +165,25 @@
 			);
 			name = Subtitler;
 			productName = Subtitler;
-			productReference = 9725B3F5270285C3006A140B /* Subtitler.app */;
+			productReference = 974FAA702703223B008B539B /* Subtitler.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9725B3ED270285C3006A140B /* Project object */ = {
+		974FAA682703223B008B539B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					9725B3F4270285C3006A140B = {
+					974FAA6F2703223B008B539B = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = 9725B3F0270285C3006A140B /* Build configuration list for PBXProject "Subtitler" */;
+			buildConfigurationList = 974FAA6B2703223B008B539B /* Build configuration list for PBXProject "Subtitler" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,30 +191,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 9725B3EC270285C3006A140B;
-			productRefGroup = 9725B3F6270285C3006A140B /* Products */;
+			mainGroup = 974FAA672703223B008B539B;
+			productRefGroup = 974FAA712703223B008B539B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9725B3F4270285C3006A140B /* Subtitler */,
+				974FAA6F2703223B008B539B /* Subtitler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9725B3F3270285C3006A140B /* Resources */ = {
+		974FAA6E2703223B008B539B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9725B3FD270285C6006A140B /* Assets.xcassets in Resources */,
-				9725B400270285C6006A140B /* Main.storyboard in Resources */,
+				974FAA7A2703223C008B539B /* Assets.xcassets in Resources */,
+				97FAA54F270326DE00684B3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0446153D0D94E434893762F1 /* [CP] Check Pods Manifest.lock */ = {
+		4A11264A9711B98E22E06BFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -217,24 +236,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		15C9498C31FB68C7A0C14292 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		977573EF2702B2670037AECD /* TODOs */ = {
+		972CAB75270325B4005E9C3D /* TODOs */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,28 +254,48 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\ndeclare -a TAGS=(\"TODO:\" \"FIXME:\" \"ASK:\" \"WAITING:\" \"LATER:\")\necho \"searching ${SRCROOT} for ${TAGS}\"\n\nfor TAG in ${TAGS[@]}; do\nfind \"${SRCROOT}/Subtitler\" \\( -name \"*.swift\" -or -name \"*.m\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAG).*\\$\" | perl -p -e \"s/($TAG)/ warning: \\$1/\"\ndone\n";
 		};
+		BB8A73F0AA7F023FC3296212 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9725B3F1270285C3006A140B /* Sources */ = {
+		974FAA6C2703223B008B539B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9725B40827028E3B006A140B /* Subtitle.swift in Sources */,
-				9725B3FB270285C3006A140B /* ViewController.swift in Sources */,
-				9725B40D27029224006A140B /* NSTableView+SY.swift in Sources */,
-				977573EE2702AB6A0037AECD /* TimingButton.swift in Sources */,
-				9725B3F9270285C3006A140B /* AppDelegate.swift in Sources */,
+				974FAA742703223B008B539B /* AppDelegate.swift in Sources */,
+				972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */,
+				9702708727033502001B5785 /* DocumentController.swift in Sources */,
+				97027089270339EC001B5785 /* PlayerView.swift in Sources */,
+				972CAB7327032591005E9C3D /* TimingButton.swift in Sources */,
+				972CAB7427032591005E9C3D /* ViewController.swift in Sources */,
+				974FAA782703223B008B539B /* Subtitle.swift in Sources */,
+				9702708427032EA9001B5785 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9725B3FE270285C6006A140B /* Main.storyboard */ = {
+		974FAA7B2703223C008B539B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9725B3FF270285C6006A140B /* Base */,
+				974FAA7C2703223C008B539B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -281,7 +303,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9725B402270285C6006A140B /* Debug */ = {
+		974FAA802703223C008B539B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -342,7 +364,7 @@
 			};
 			name = Debug;
 		};
-		9725B403270285C6006A140B /* Release */ = {
+		974FAA812703223C008B539B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -396,19 +418,22 @@
 			};
 			name = Release;
 		};
-		9725B405270285C6006A140B /* Debug */ = {
+		974FAA832703223C008B539B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E414C4B023A785FA42073476 /* Pods-Subtitler.debug.xcconfig */;
+			baseConfigurationReference = 2D663F687E9DBD75298B2755 /* Pods-Subtitler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Subtitler/Subtitler.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Subtitler/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -424,19 +449,22 @@
 			};
 			name = Debug;
 		};
-		9725B406270285C6006A140B /* Release */ = {
+		974FAA842703223C008B539B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAFE530D8D64024133133648 /* Pods-Subtitler.release.xcconfig */;
+			baseConfigurationReference = DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Subtitler/Subtitler.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Subtitler/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -455,25 +483,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9725B3F0270285C3006A140B /* Build configuration list for PBXProject "Subtitler" */ = {
+		974FAA6B2703223B008B539B /* Build configuration list for PBXProject "Subtitler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9725B402270285C6006A140B /* Debug */,
-				9725B403270285C6006A140B /* Release */,
+				974FAA802703223C008B539B /* Debug */,
+				974FAA812703223C008B539B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9725B404270285C6006A140B /* Build configuration list for PBXNativeTarget "Subtitler" */ = {
+		974FAA822703223C008B539B /* Build configuration list for PBXNativeTarget "Subtitler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9725B405270285C6006A140B /* Debug */,
-				9725B406270285C6006A140B /* Release */,
+				974FAA832703223C008B539B /* Debug */,
+				974FAA842703223C008B539B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9725B3ED270285C3006A140B /* Project object */;
+	rootObject = 974FAA682703223B008B539B /* Project object */;
 }

@@ -1,15 +1,72 @@
 //
-//  Subtitle.swift
+//  Document.swift
 //  Subtitler
 //
 //  Created by Stanislas Chevallier on 28/09/2021.
 //
 
-import Foundation
+import Cocoa
 
-struct Subtitle {
-    private(set) var lines: [Line]
+class Subtitle: NSDocument {
 
+    // MARK: Document
+    override init() {
+        super.init()
+        self.isTransient = true
+    }
+
+    override class var autosavesInPlace: Bool {
+        return true
+    }
+    
+    override func makeWindowControllers() {
+        // Returns the Storyboard that contains your Document window.
+        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")) as! NSWindowController
+        let contentViewController = windowController.contentViewController as! ViewController
+        contentViewController.representedObject = self
+        self.addWindowController(windowController)
+    }
+
+    override func data(ofType typeName: String) throws -> Data {
+        switch typeName {
+        case "public.plain-text":
+            return lines.map(\.text).joined(separator: "\n").data(using: .utf8)!
+            
+        case "public.srt":
+            // TODO: proper implementation
+            return lines.map(\.text).joined(separator: "\n").data(using: .utf8)!
+
+        default:
+            throw AppError.invalidFileType
+        }
+    }
+
+    override func read(from data: Data, ofType typeName: String) throws {
+        switch typeName {
+        case "public.plain-text":
+            let lines = String(data: data, encoding: .utf8)!.split(separator: "\n")
+            self.lines = lines.enumerated().map { line in
+                Line(text: String(line.element), timeStart: TimeInterval(line.offset), timeEnd: TimeInterval(line.offset))
+            }
+            isTransient = false
+            fileURL = nil
+            fileType = "public.srt"
+
+        case "public.srt":
+            // TODO: proper implementation
+            let lines = String(data: data, encoding: .utf8)!.split(separator: "\n")
+            self.lines = lines.enumerated().map { line in
+                Line(text: String(line.element), timeStart: TimeInterval(line.offset), timeEnd: TimeInterval(line.offset))
+            }
+            isTransient = false
+
+        default:
+            throw AppError.invalidFileType
+        }
+    }
+
+    // MARK: Types
     struct Line {
         var text: String
         var timeStart: TimeInterval
@@ -38,24 +95,29 @@ struct Subtitle {
             return durationFormatter.string(from: time)! + fractionalSecondsFormatter.string(from: fractionalPart)!
         }
     }
-    
-    mutating func add(line: String) -> Int {
+
+    // MARK: Properties
+    private(set) var isTransient: Bool = false
+    private(set) var lines: [Line] = []
+    var isEmpty: Bool {
+        return lines.isEmpty
+    }
+
+    // MARK: Actions
+    func add(line: String) -> Int {
+        isTransient = false
+        updateChangeCount(.changeDone)
+        
         let currentMax = lines.map(\.timeStart).max() ?? TimeInterval(-1)
         lines.append(Line(text: line, timeStart: currentMax + 1, timeEnd: currentMax + 1))
         return lines.count - 1
     }
     
-    mutating func updateTimings(for lineIndex: Int, start: TimeInterval, end: TimeInterval) {
+    func updateTimings(for lineIndex: Int, start: TimeInterval, end: TimeInterval) {
+        isTransient = false
+        updateChangeCount(.changeDone)
+
         lines[lineIndex].timeStart = start
         lines[lineIndex].timeEnd = end
-    }
-}
-
-extension Subtitle {
-    init(from url: URL) {
-        let lines = try! String(contentsOf: url).split(separator: "\n")
-        self.lines = lines.enumerated().map { line in
-            Line(text: String(line.element), timeStart: TimeInterval(line.offset), timeEnd: TimeInterval(line.offset))
-        }
     }
 }

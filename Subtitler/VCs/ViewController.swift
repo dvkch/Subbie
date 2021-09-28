@@ -22,57 +22,41 @@ class ViewController: NSViewController {
     // MARK: VC
     override func viewDidLoad() {
         super.viewDidLoad()
+        representedObject = representedObject ?? Subtitle()
+        playerView.delegate = self
         timingButton.delegate = self
     }
     
     override func viewDidAppear() {
         super.viewDidAppear()
         if subtitleURL == nil {
-            openSubtitle(sender: nil)
+            //openSubtitle(sender: nil)
         }
     }
 
     override var representedObject: Any? {
         didSet {
-            // Update the view, if already loaded.
+            updateContent()
         }
     }
 
     // MARK: Properties
     private var subtitleURL: URL?
     private var videoURL: URL?
-    private var subtitle = Subtitle(lines: [])
+    private var subtitle: Subtitle {
+        get { representedObject as! Subtitle }
+        set { representedObject = newValue }
+    }
     private var timingButtonPressStart: CMTime?
     private var timingButtonPressEnd: CMTime?
 
     // MARK: Views
     @IBOutlet private var tableView: NSTableView!
     @IBOutlet private var textfield: NSTextField!
-    @IBOutlet private var playerView: AVPlayerView!
+    @IBOutlet private var playerView: PlayerView!
     @IBOutlet private var timingButton: PressButton!
 
     // MARK: Actions
-    @IBAction private func openSubtitle(sender: AnyObject?) {
-        guard let window = view.window else { return }
-        let panel = NSOpenPanel()
-        panel.canChooseDirectories = false
-        panel.canChooseFiles = true
-        panel.resolvesAliases = true
-        panel.prompt = "Open subtitle file"
-        panel.allowsMultipleSelection = false
-        panel.allowedFileTypes = ["txt", "srt"]
-        panel.beginSheetModal(for: window) { response in
-            if response == .OK, let url = panel.url {
-                self.subtitleURL = url
-                self.subtitle = Subtitle(from: url)
-                self.updateContent()
-            }
-            else if self.subtitleURL == nil {
-                window.close()
-            }
-        }
-    }
-    
     @IBAction private func openVideo(sender: AnyObject?) {
         guard let window = view.window else { return }
         let panel = NSOpenPanel()
@@ -161,7 +145,13 @@ class ViewController: NSViewController {
     }
     
     private func updateTimingButton() {
-        timingButton.isEnabled = playerView.player != nil && tableView.selectedRow >= 0
+        timingButton.isEnabled = playerView.player != nil && tableView.selectedRow >= 0 && playerView.isPlaying
+    }
+}
+
+extension ViewController: PlayerViewDelegate {
+    func playerViewPlayingStatusChanged(_ playerView: PlayerView, playingStatus: Bool) {
+        updateTimingButton()
     }
 }
 
