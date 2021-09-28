@@ -10,11 +10,10 @@ import AVKit
 import SnapKit
 
 // TODO: show subtitles in video player
-// TODO: implement undo
 // TODO: allow text editing (timings too ? with validation using binding and value transformer ?)
 // TODO: add parser/Writer specs, simple thing for nilpotence on valid input file
-// TODO: ajouter choix de vitesse de player
 // TODO: selectionner plusieurs lignes et demander de mapper time End = (n-1).timeStart
+// TODO: scroll dans le player sur selection d'une ligne
 
 class ViewController: NSViewController {
 
@@ -122,12 +121,13 @@ class ViewController: NSViewController {
     
     // MARK: Content
     private func updateContent() {
-        if #available(macOS 11.0, *) {
-            view.window?.subtitle = subtitleURL?.lastPathComponent ?? ""
-        }
-        tableView.reloadData()
+        updateTableView()
         updateVideoView()
         updateTimingButton()
+    }
+    
+    func updateTableView() {
+        tableView.reloadData()
     }
     
     private func updateVideoView() {
