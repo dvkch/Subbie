@@ -24,10 +24,32 @@ class PlayerView: AVPlayerView {
                 addStatusObservers(to: player)
             }
             delegate?.playerViewPlayingStatusChanged(self, playingStatus: isPlaying)
+
+            // https://github.com/w0lfschild/macOS_headers/blob/a5c2da62810189aa7ea71e6a3e1c98d98bb6620e/macOS/Frameworks/AVKit/587/AVPlayerView.h#L277
+            // toggle to force reloading
+            setValue(true, forKey: "canHideControls")
+            setValue(false, forKey: "canHideControls")
         }
     }
     var isPlaying: Bool {
         return (player?.rate ?? 0) > 0
+    }
+    var preferredSpeed: Float = 1 {
+        didSet {
+            if isPlaying {
+                player?.rate = preferredSpeed
+            }
+        }
+    }
+    
+    // MARK: Actions
+    func play() {
+        player?.play()
+        player?.rate = preferredSpeed
+    }
+    
+    func pause() {
+        player?.pause()
     }
 
     // MARK: Observers

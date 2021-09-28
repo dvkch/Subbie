@@ -266,24 +266,24 @@ CA
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Subtitler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="574"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <splitView misplaced="YES" arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ph-wY-p8i">
-                                <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                                <rect key="frame" x="0.0" y="-26" width="800" height="600"/>
                                 <subviews>
                                     <customView misplaced="YES" id="JCY-wC-yOm">
                                         <rect key="frame" x="0.0" y="0.0" width="380" height="600"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-1O-CVB">
-                                                <rect key="frame" x="0.0" y="46" width="380" height="97"/>
+                                                <rect key="frame" x="0.0" y="46" width="380" height="447"/>
                                                 <clipView key="contentView" id="bus-Px-5FW">
-                                                    <rect key="frame" x="1" y="1" width="378" height="95"/>
+                                                    <rect key="frame" x="1" y="1" width="378" height="445"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" tableStyle="fullWidth" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" usesAutomaticRowHeights="YES" headerView="IK9-0e-Sxy" viewBased="YES" id="8su-3M-rp4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="67"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="417"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -458,7 +458,7 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Ef-s8W" customClass="PlayerView" customModule="Subtitler" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44" width="419" height="99"/>
+                                                <rect key="frame" x="0.0" y="112" width="419" height="381"/>
                                             </avPlayerView>
                                             <button verticalHuggingPriority="750" springLoaded="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-6E-XRp" customClass="PressButton" customModule="Subtitler" customModuleProvider="target">
                                                 <rect key="frame" x="2" y="2" width="415" height="40"/>
@@ -467,15 +467,21 @@ CA
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                             </button>
+                                            <customView verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="419" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="q6d-WN-L58" customClass="PlayerControlsView" customModule="Subtitler" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44" width="419" height="60"/>
+                                            </customView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="EV0-6E-XRp" secondAttribute="bottom" constant="8" id="EV4-5I-wGM"/>
-                                            <constraint firstItem="EV0-6E-XRp" firstAttribute="top" secondItem="fFl-Ef-s8W" secondAttribute="bottom" constant="8" id="Lhp-BK-2HB"/>
                                             <constraint firstItem="fFl-Ef-s8W" firstAttribute="leading" secondItem="vFy-ic-2Wk" secondAttribute="leading" id="Q8E-2n-KT7"/>
                                             <constraint firstAttribute="trailing" secondItem="EV0-6E-XRp" secondAttribute="trailing" constant="8" id="Qzj-kX-nNb"/>
                                             <constraint firstItem="fFl-Ef-s8W" firstAttribute="top" secondItem="vFy-ic-2Wk" secondAttribute="top" id="RR7-d2-2a3"/>
+                                            <constraint firstAttribute="trailing" secondItem="q6d-WN-L58" secondAttribute="trailing" id="SvQ-EV-nYe"/>
                                             <constraint firstAttribute="trailing" secondItem="fFl-Ef-s8W" secondAttribute="trailing" id="Z5M-NV-uBW"/>
                                             <constraint firstItem="EV0-6E-XRp" firstAttribute="leading" secondItem="vFy-ic-2Wk" secondAttribute="leading" constant="8" id="d6k-Ya-Xm7"/>
+                                            <constraint firstItem="EV0-6E-XRp" firstAttribute="top" secondItem="q6d-WN-L58" secondAttribute="bottom" constant="8" id="nD2-dQ-Tv4"/>
+                                            <constraint firstItem="q6d-WN-L58" firstAttribute="leading" secondItem="vFy-ic-2Wk" secondAttribute="leading" id="sPS-HZ-kVM"/>
+                                            <constraint firstItem="q6d-WN-L58" firstAttribute="top" secondItem="fFl-Ef-s8W" secondAttribute="bottom" constant="8" id="wbK-sA-6BR"/>
                                         </constraints>
                                     </customView>
                                 </subviews>
@@ -493,6 +499,7 @@ CA
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playerControlsView" destination="q6d-WN-L58" id="998-Im-v5Y"/>
                         <outlet property="playerView" destination="fFl-Ef-s8W" id="5tU-s5-aYE"/>
                         <outlet property="tableView" destination="8su-3M-rp4" id="s0L-9n-ix5"/>
                         <outlet property="textfield" destination="zCx-QZ-uze" id="Co4-A9-N7M"/>

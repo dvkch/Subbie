@@ -52,6 +52,8 @@
 		979249792703473900248C3D /* SubRipParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRipParser.swift; sourceTree = "<group>"; };
 		9792497F270351F900248C3D /* SubtitlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtitlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97924981270351FA00248C3D /* SubtitlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitlerTests.swift; sourceTree = "<group>"; };
+		97924988270374C700248C3D /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
+		9792498A2703802100248C3D /* Codable+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+SY.swift"; sourceTree = "<group>"; };
 		DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.release.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.release.xcconfig"; sourceTree = "<group>"; };
 		EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtitler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 		972CAB6D27032591005E9C3D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				97924988270374C700248C3D /* PlayerControlsView.swift */,
 				97027088270339EC001B5785 /* PlayerView.swift */,
 				972CAB6E27032591005E9C3D /* TimingButton.swift */,
 			);
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9792497A2703473900248C3D /* SubRipParser.swift in Sources */,
+				97924989270374C700248C3D /* PlayerControlsView.swift in Sources */,
 				974FAA742703223B008B539B /* AppDelegate.swift in Sources */,
 				972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */,
 				9702708727033502001B5785 /* DocumentController.swift in Sources */,

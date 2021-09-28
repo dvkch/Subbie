@@ -11,7 +11,7 @@ import SnapKit
 
 // TODO: show subtitles in video player
 // TODO: implement undo
-// TODO: allow text editing
+// TODO: allow text editing (timings too ? with validation using binding and value transformer ?)
 // TODO: add parser/Writer specs, simple thing for nilpotence on valid input file
 // TODO: ajouter choix de vitesse de player
 // TODO: selectionner plusieurs lignes et demander de mapper time End = (n-1).timeStart
@@ -24,6 +24,7 @@ class ViewController: NSViewController {
         representedObject = representedObject ?? Subtitle()
         tableView.registerForDraggedTypes([subtitleLineKind])
         playerView.delegate = self
+        playerControlsView.delegate = self
         timingButton.delegate = self
     }
 
@@ -93,12 +94,11 @@ class ViewController: NSViewController {
     }
     
     @IBAction private func playPause(sender: AnyObject?) {
-        guard let player = playerView.player else { return }
-        if player.rate > 0 {
-            player.pause()
+        if playerView.isPlaying {
+            playerView.pause()
         }
         else {
-            player.play()
+            playerView.play()
         }
     }
     
@@ -136,14 +136,10 @@ class ViewController: NSViewController {
         } else {
             playerView.player = nil
         }
-
-        // https://github.com/w0lfschild/macOS_headers/blob/a5c2da62810189aa7ea71e6a3e1c98d98bb6620e/macOS/Frameworks/AVKit/587/AVPlayerView.h#L277
-        // toggle to force reloading
-        playerView.setValue(true, forKey: "canHideControls")
-        playerView.setValue(false, forKey: "canHideControls")
     }
     
     private func updateTimingButton() {
+        playerControlsView.isEnabled = playerView.player != nil
         timingButton.isEnabled = playerView.player != nil && tableView.selectedRow >= 0 && playerView.isPlaying
     }
 }
@@ -168,6 +164,12 @@ extension ViewController: NSMenuItemValidation {
 extension ViewController: PlayerViewDelegate {
     func playerViewPlayingStatusChanged(_ playerView: PlayerView, playingStatus: Bool) {
         updateTimingButton()
+    }
+}
+
+extension ViewController: PlayerControlsViewDelegate {
+    func playerControlsView(_ playerControlsView: PlayerControlsView, changedSpeedTo speed: Float) {
+        playerView.preferredSpeed = playerControlsView.selectedSpeed
     }
 }
 
