@@ -16,6 +16,7 @@
 		974FAA742703223B008B539B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA732703223B008B539B /* AppDelegate.swift */; };
 		974FAA782703223B008B539B /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA772703223B008B539B /* Subtitle.swift */; };
 		974FAA7A2703223C008B539B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA792703223C008B539B /* Assets.xcassets */; };
+		9792497A2703473900248C3D /* SubRipParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979249792703473900248C3D /* SubRipParser.swift */; };
 		97FAA54F270326DE00684B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA7B2703223C008B539B /* Main.storyboard */; };
 		E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		974FAA7C2703223C008B539B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		974FAA7E2703223C008B539B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		974FAA7F2703223C008B539B /* Subtitler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Subtitler.entitlements; sourceTree = "<group>"; };
+		979249792703473900248C3D /* SubRipParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRipParser.swift; sourceTree = "<group>"; };
 		DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.release.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.release.xcconfig"; sourceTree = "<group>"; };
 		EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtitler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 			children = (
 				9702708327032EA9001B5785 /* AppError.swift */,
 				974FAA772703223B008B539B /* Subtitle.swift */,
+				979249792703473900248C3D /* SubRipParser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9792497A2703473900248C3D /* SubRipParser.swift in Sources */,
 				974FAA742703223B008B539B /* AppDelegate.swift in Sources */,
 				972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */,
 				9702708727033502001B5785 /* DocumentController.swift in Sources */,

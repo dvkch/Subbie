@@ -9,4 +9,5 @@ import Foundation
 
 enum AppError: LocalizedError {
     case invalidFileType
+    case invalidTimingsFormat
 }

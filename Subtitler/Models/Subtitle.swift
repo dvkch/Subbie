@@ -28,38 +28,33 @@ class Subtitle: NSDocument {
         self.addWindowController(windowController)
     }
 
-    override func data(ofType typeName: String) throws -> Data {
+    override func read(from data: Data, ofType typeName: String) throws {
         switch typeName {
         case "public.plain-text":
-            return lines.map(\.text).joined(separator: "\n").data(using: .utf8)!
-            
+            self.lines = String(data: data, encoding: .utf8)!
+                .split(separator: "\n")
+                .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                .filter { !$0.isEmpty }
+                .enumerated()
+                .map { line in Line(text: String(line.element), timeStart: TimeInterval(line.offset), timeEnd: TimeInterval(line.offset)) }
+
+            isTransient = false
+            fileURL = nil
+            fileType = "public.srt"
+
         case "public.srt":
-            // TODO: proper implementation
-            return lines.map(\.text).joined(separator: "\n").data(using: .utf8)!
+            self.lines = try SubRipParser.parse(data: data)
+            isTransient = false
 
         default:
             throw AppError.invalidFileType
         }
     }
 
-    override func read(from data: Data, ofType typeName: String) throws {
+    override func data(ofType typeName: String) throws -> Data {
         switch typeName {
-        case "public.plain-text":
-            let lines = String(data: data, encoding: .utf8)!.split(separator: "\n")
-            self.lines = lines.enumerated().map { line in
-                Line(text: String(line.element), timeStart: TimeInterval(line.offset), timeEnd: TimeInterval(line.offset))
-            }
-            isTransient = false
-            fileURL = nil
-            fileType = "public.srt"
-
         case "public.srt":
-            // TODO: proper implementation
-            let lines = String(data: data, encoding: .utf8)!.split(separator: "\n")
-            self.lines = lines.enumerated().map { line in
-                Line(text: String(line.element), timeStart: TimeInterval(line.offset), timeEnd: TimeInterval(line.offset))
-            }
-            isTransient = false
+            return try SubRipParser.write(lines: lines)
 
         default:
             throw AppError.invalidFileType
