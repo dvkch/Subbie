@@ -56,7 +56,27 @@ class ViewController: NSViewController {
     @IBOutlet private var playerView: PlayerView!
     @IBOutlet private var timingButton: PressButton!
 
-    // MARK: Actions
+    // MARK: Table Actions
+    @IBAction private func textfieldDidReturn(sender: AnyObject?) {
+        let string = textfield.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !string.isEmpty else { return }
+        let addedIndex = subtitle.add(line: string)
+        tableView.insertRows(at: IndexSet(integer: addedIndex), withAnimation: .slideDown)
+        textfield.stringValue = ""
+    }
+    
+    @IBAction private func removeLine(sender: AnyObject?) {
+        guard tableView.selectedRow >= 0 else { return }
+        let removedIndex = tableView.selectedRow
+        subtitle.removeLine(at: removedIndex)
+        tableView.removeRows(at: IndexSet(integer: removedIndex), withAnimation: .slideUp)
+
+        if removedIndex - 1 >= 0 && tableView.numberOfRows > 0 {
+            tableView.selectRowIndexes(IndexSet(integer: removedIndex - 1), byExtendingSelection: false)
+        }
+    }
+
+    // MARK: Video Actions
     @IBAction private func openVideo(sender: AnyObject?) {
         guard let window = view.window else { return }
         let panel = NSOpenPanel()
@@ -74,51 +94,32 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction private func textfieldDidReturn(sender: AnyObject?) {
-        let string = textfield.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !string.isEmpty else { return }
-        let addedIndex = subtitle.add(line: string)
-        tableView.insertRows(at: IndexSet(integer: addedIndex), withAnimation: .slideDown)
-        textfield.stringValue = ""
+    @IBAction private func playPause(sender: AnyObject?) {
+        guard let player = playerView.player else { return }
+        if player.rate > 0 {
+            player.pause()
+        }
+        else {
+            player.play()
+        }
     }
     
-    private func handlePlayerKeyPress(event: NSEvent) -> Bool {
-        guard let player = playerView.player else { return false }
-        
-        if event.keyCode == 49 && !event.isARepeat {
-            // space bar
-            if player.rate > 0 {
-                player.pause()
-            }
-            else {
-                player.play()
-            }
-            return true
-        }
-
-        switch event.keyCode {
-        case 123:
-            player.seek(to: CMTime(seconds: player.currentTime().seconds - 5, preferredTimescale: player.currentTime().timescale))
-            return true
-
-        case 124:
-            player.seek(to: CMTime(seconds: player.currentTime().seconds + 5, preferredTimescale: player.currentTime().timescale))
-            return true
-
-        default:
-            return false
-        }
+    @IBAction private func seekForward(sender: AnyObject?) {
+        guard let player = playerView.player else { return }
+        player.seek(to: CMTime(seconds: player.currentTime().seconds + 5, preferredTimescale: player.currentTime().timescale))
+    }
+    
+    @IBAction private func seekBackward(sender: AnyObject?) {
+        guard let player = playerView.player else { return }
+        player.seek(to: CMTime(seconds: player.currentTime().seconds - 5, preferredTimescale: player.currentTime().timescale))
     }
     
     override func keyDown(with event: NSEvent) {
-        guard textfield.currentEditor() == nil else {
-            super.keyDown(with: event)
+        if textfield.currentEditor() == nil && event.keyCode == 49 && !event.isARepeat {
+            playPause(sender: event)
             return
         }
-
-        if !handlePlayerKeyPress(event: event) {
-            super.keyDown(with: event)
-        }
+        super.keyDown(with: event)
     }
     
     // MARK: Content
@@ -146,6 +147,23 @@ class ViewController: NSViewController {
     
     private func updateTimingButton() {
         timingButton.isEnabled = playerView.player != nil && tableView.selectedRow >= 0 && playerView.isPlaying
+    }
+}
+
+extension ViewController: NSMenuItemValidation {
+    func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+        switch menuItem.action {
+        case #selector(playPause(sender:)):
+            return playerView.player != nil && textfield.currentEditor() == nil
+        case #selector(seekForward(sender:)):
+            return playerView.player != nil && textfield.currentEditor() == nil
+        case #selector(seekBackward(sender:)):
+            return playerView.player != nil && textfield.currentEditor() == nil
+        case #selector(removeLine(sender:)):
+            return tableView.selectedRow >= 0
+        default:
+            return false
+        }
     }
 }
 

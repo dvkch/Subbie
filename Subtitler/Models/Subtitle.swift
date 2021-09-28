@@ -120,4 +120,11 @@ class Subtitle: NSDocument {
         lines[lineIndex].timeStart = start
         lines[lineIndex].timeEnd = end
     }
+    
+    func removeLine(at index: Int) {
+        isTransient = false
+        updateChangeCount(.changeDone)
+
+        lines.remove(at: index)
+    }
 }
