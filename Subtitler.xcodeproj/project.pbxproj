@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182B1E0B75DD00AE6222B8BF /* Pods_Subtitler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC3EA7F2C4BAAEC92241D3B /* Pods_Subtitler.framework */; };
 		9725B3F9270285C3006A140B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725B3F8270285C3006A140B /* AppDelegate.swift */; };
 		9725B3FB270285C3006A140B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725B3FA270285C3006A140B /* ViewController.swift */; };
 		9725B3FD270285C6006A140B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9725B3FC270285C6006A140B /* Assets.xcassets */; };
 		9725B400270285C6006A140B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9725B3FE270285C6006A140B /* Main.storyboard */; };
+		9725B40827028E3B006A140B /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725B40727028E3B006A140B /* Subtitle.swift */; };
+		9725B40D27029224006A140B /* NSTableView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9725B40C27029224006A140B /* NSTableView+SY.swift */; };
+		977573EE2702AB6A0037AECD /* TimingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977573ED2702AB6A0037AECD /* TimingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CC3EA7F2C4BAAEC92241D3B /* Pods_Subtitler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtitler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9725B3F5270285C3006A140B /* Subtitler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtitler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9725B3F8270285C3006A140B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9725B3FA270285C3006A140B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9725B3FC270285C6006A140B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9725B3FF270285C6006A140B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9725B401270285C6006A140B /* Subtitler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Subtitler.entitlements; sourceTree = "<group>"; };
+		9725B40727028E3B006A140B /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		9725B40C27029224006A140B /* NSTableView+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTableView+SY.swift"; sourceTree = "<group>"; };
+		977573ED2702AB6A0037AECD /* TimingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingButton.swift; sourceTree = "<group>"; };
+		CAFE530D8D64024133133648 /* Pods-Subtitler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.release.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.release.xcconfig"; sourceTree = "<group>"; };
+		E414C4B023A785FA42073476 /* Pods-Subtitler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.debug.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182B1E0B75DD00AE6222B8BF /* Pods_Subtitler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2595D3CA1DF76D61FD841E40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E414C4B023A785FA42073476 /* Pods-Subtitler.debug.xcconfig */,
+				CAFE530D8D64024133133648 /* Pods-Subtitler.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8778D8AB4587D7F689A8511D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CC3EA7F2C4BAAEC92241D3B /* Pods_Subtitler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9725B3EC270285C3006A140B = {
 			isa = PBXGroup;
 			children = (
 				9725B3F7270285C3006A140B /* Subtitler */,
 				9725B3F6270285C3006A140B /* Products */,
+				2595D3CA1DF76D61FD841E40 /* Pods */,
+				8778D8AB4587D7F689A8511D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +82,48 @@
 		9725B3F7270285C3006A140B /* Subtitler */ = {
 			isa = PBXGroup;
 			children = (
+				9725B40B27029218006A140B /* Extensions */,
+				9725B40927028F94006A140B /* Models */,
+				977573EA27029C380037AECD /* Views */,
+				9725B40A27028F9E006A140B /* VCs */,
 				9725B3F8270285C3006A140B /* AppDelegate.swift */,
-				9725B3FA270285C3006A140B /* ViewController.swift */,
 				9725B3FC270285C6006A140B /* Assets.xcassets */,
 				9725B3FE270285C6006A140B /* Main.storyboard */,
 				9725B401270285C6006A140B /* Subtitler.entitlements */,
 			);
 			path = Subtitler;
+			sourceTree = "<group>";
+		};
+		9725B40927028F94006A140B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9725B40727028E3B006A140B /* Subtitle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9725B40A27028F9E006A140B /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				9725B3FA270285C3006A140B /* ViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		9725B40B27029218006A140B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9725B40C27029224006A140B /* NSTableView+SY.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		977573EA27029C380037AECD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				977573ED2702AB6A0037AECD /* TimingButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9725B404270285C6006A140B /* Build configuration list for PBXNativeTarget "Subtitler" */;
 			buildPhases = (
+				977573EF2702B2670037AECD /* TODOs */,
+				0446153D0D94E434893762F1 /* [CP] Check Pods Manifest.lock */,
 				9725B3F1270285C3006A140B /* Sources */,
 				9725B3F2270285C3006A140B /* Frameworks */,
 				9725B3F3270285C3006A140B /* Resources */,
+				15C9498C31FB68C7A0C14292 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +194,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0446153D0D94E434893762F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Subtitler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15C9498C31FB68C7A0C14292 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		977573EF2702B2670037AECD /* TODOs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = TODOs;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\ndeclare -a TAGS=(\"TODO:\" \"FIXME:\" \"ASK:\" \"WAITING:\" \"LATER:\")\necho \"searching ${SRCROOT} for ${TAGS}\"\n\nfor TAG in ${TAGS[@]}; do\nfind \"${SRCROOT}/Subtitler\" \\( -name \"*.swift\" -or -name \"*.m\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAG).*\\$\" | perl -p -e \"s/($TAG)/ warning: \\$1/\"\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9725B3F1270285C3006A140B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9725B40827028E3B006A140B /* Subtitle.swift in Sources */,
 				9725B3FB270285C3006A140B /* ViewController.swift in Sources */,
+				9725B40D27029224006A140B /* NSTableView+SY.swift in Sources */,
+				977573EE2702AB6A0037AECD /* TimingButton.swift in Sources */,
 				9725B3F9270285C3006A140B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -256,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -267,6 +398,7 @@
 		};
 		9725B405270285C6006A140B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E414C4B023A785FA42073476 /* Pods-Subtitler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +426,7 @@
 		};
 		9725B406270285C6006A140B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAFE530D8D64024133133648 /* Pods-Subtitler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
