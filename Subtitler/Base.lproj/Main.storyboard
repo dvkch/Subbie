@@ -225,18 +225,27 @@ CA
                         <value key="minSize" type="size" width="800" height="500"/>
                         <toolbar key="toolbar" implicitIdentifier="7C425909-4B6F-433F-A536-376E821FA056" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="plb-2i-FYo">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="7BCA5CC1-AFCC-49CE-84F0-C81356585719" explicitItemIdentifier="OPEN VIDEO" label="Open video..." paletteLabel="Open video..." tag="-1" image="movie-medium-m" bordered="YES" id="OH9-4F-uXl">
-                                    <size key="minSize" width="30" height="25"/>
-                                    <size key="maxSize" width="30" height="25"/>
-                                    <connections>
-                                        <action selector="openVideoWithSender:" target="Oky-zY-oP4" id="CEz-ob-EAW"/>
-                                    </connections>
+                                <toolbarItem implicitItemIdentifier="E18FE345-564B-470F-A046-EA3AAB63A199" label="Open video" paletteLabel="Open video" image="movie-medium-m" title="Open video" sizingBehavior="auto" id="Fhw-vF-M21">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="Db5-16-J9e">
+                                        <rect key="frame" x="0.0" y="14" width="68" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="bevel" title="Open video" bezelStyle="rounded" image="movie-medium-m" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="KBT-cI-WxS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">O</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openVideoWithSender:" target="Oky-zY-oP4" id="7bs-gF-feg"/>
+                                        </connections>
+                                    </button>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="4Sl-vD-PKw"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="QAt-xU-S2F"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="OH9-4F-uXl"/>
+                                <toolbarItem reference="Fhw-vF-M21"/>
                                 <toolbarItem reference="QAt-xU-S2F"/>
                             </defaultToolbarItems>
                         </toolbar>
@@ -496,7 +505,7 @@ CA
         </scene>
     </scenes>
     <resources>
-        <image name="movie-medium-m" width="117" height="92"/>
+        <image name="movie-medium-m" width="40.5" height="32"/>
         <image name="stopwatch-medium-18pt" width="18" height="21"/>
     </resources>
 </document>
