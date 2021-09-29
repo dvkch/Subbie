@@ -123,8 +123,13 @@ class Subtitle: NSDocument {
         isTransient = false
         updateChangeCount(.changeDone)
         
+        var newText = text
+        while newText.contains("\n\n") {
+            newText = newText.replacingOccurrences(of: "\n\n", with: "\n")
+        }
+
         let previousText = lines[lineIndex].text
-        lines[lineIndex].text = text.replacingOccurrences(of: "\n\n", with: "\n")
+        lines[lineIndex].text = newText
 
         undoManager?.registerUndo(withTarget: self, handler: { selfTarget in
             selfTarget.updateText(for: lineIndex, text: previousText)

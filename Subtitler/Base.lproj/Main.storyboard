@@ -231,9 +231,9 @@ CA
                 <windowController storyboardIdentifier="Document Window Controller" showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Subtitler" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <rect key="contentRect" x="479" y="251" width="800" height="500"/>
+                        <rect key="contentRect" x="479" y="251" width="900" height="500"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="800" height="500"/>
+                        <value key="minSize" type="size" width="900" height="500"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -251,24 +251,24 @@ CA
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Subtitler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="574"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="549"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <splitView misplaced="YES" arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ph-wY-p8i">
-                                <rect key="frame" x="0.0" y="-26" width="800" height="600"/>
+                                <rect key="frame" x="0.0" y="-51" width="800" height="600"/>
                                 <subviews>
                                     <customView misplaced="YES" id="JCY-wC-yOm">
                                         <rect key="frame" x="0.0" y="0.0" width="380" height="600"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-1O-CVB">
-                                                <rect key="frame" x="0.0" y="46" width="380" height="78"/>
+                                                <rect key="frame" x="0.0" y="46" width="380" height="403"/>
                                                 <clipView key="contentView" id="bus-Px-5FW">
-                                                    <rect key="frame" x="1" y="1" width="378" height="76"/>
+                                                    <rect key="frame" x="1" y="1" width="378" height="401"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" tableStyle="fullWidth" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" usesAutomaticRowHeights="YES" headerView="IK9-0e-Sxy" viewBased="YES" id="8su-3M-rp4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="373"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -290,7 +290,7 @@ CA
                                                                             <rect key="frame" x="8" y="0.0" width="146" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-sz-zwD">
+                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-sz-zwD" customClass="SizingTextField" customModule="Subtitler" customModuleProvider="target">
                                                                                     <rect key="frame" x="2" y="2" width="142" height="16"/>
                                                                                     <textFieldCell key="cell" selectable="YES" editable="YES" allowsUndo="NO" title="Sample line with very long text" id="oNC-L2-X9N">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -444,7 +444,7 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Ef-s8W" customClass="PlayerView" customModule="Subtitler" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="419" height="12"/>
+                                                <rect key="frame" x="0.0" y="112" width="419" height="337"/>
                                             </avPlayerView>
                                             <button verticalHuggingPriority="750" springLoaded="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-6E-XRp" customClass="PressButton" customModule="Subtitler" customModuleProvider="target">
                                                 <rect key="frame" x="2" y="2" width="415" height="40"/>
@@ -472,7 +472,7 @@ CA
                                     </customView>
                                 </subviews>
                                 <holdingPriorities>
-                                    <real value="300"/>
+                                    <real value="150"/>
                                     <real value="250"/>
                                 </holdingPriorities>
                             </splitView>

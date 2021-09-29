@@ -269,7 +269,11 @@ extension ViewController: NSTableViewDelegate {
         guard let field = sender as? NSTextField else { return }
         let row = tableView.row(for: field)
         guard row >= 0 else { return }
+
         subtitle.updateText(for: row, text: field.stringValue)
+        
+        // the commited text may differ from the input text, let's make sure the row is up to date
+        tableView.reloadData(forRowIndexes: IndexSet(integer: tableView.selectedRow), columnIndexes: IndexSet(integersIn: 0...2))
     }
     
     // https://samwize.com/2018/11/27/drag-and-drop-to-reorder-nstableview/
