@@ -9,7 +9,6 @@ import Cocoa
 import AVKit
 import SnapKit
 
-// TODO: scroll dans le player sur selection d'une ligne
 // TODO: selectionner plusieurs lignes et demander de mapper time End = (n-1).timeStart
 // TODO: allow text editing (timings too ? with validation using binding and value transformer ?)
 
@@ -20,6 +19,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         representedObject = representedObject ?? Subtitle()
         tableView.registerForDraggedTypes([subtitleLineKind])
+        tableView.doubleAction = #selector(tableViewDoubleClicked(sender:))
         playerView.delegate = self
         playerControlsView.delegate = self
         timingButton.delegate = self
@@ -236,6 +236,13 @@ extension ViewController: NSTableViewDataSource {
 extension ViewController: NSTableViewDelegate {
     func tableViewSelectionDidChange(_ notification: Notification) {
         updateTimingButton()
+    }
+    
+    @objc func tableViewDoubleClicked(sender: AnyObject) {
+        guard tableView.selectedRow >= 0, let player = playerView.player, let maxTime = player.currentItem?.duration else { return }
+        
+        let desiredTime = CMTime(seconds: subtitle.lines[tableView.selectedRow].timeStart, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+        player.seek(to: min(desiredTime, maxTime))
     }
 
     // https://samwize.com/2018/11/27/drag-and-drop-to-reorder-nstableview/
