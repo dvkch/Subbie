@@ -146,6 +146,8 @@ class ViewController: NSViewController {
 extension ViewController: NSMenuItemValidation {
     func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
         switch menuItem.action {
+        case #selector(openVideo(sender:)):
+            return true
         case #selector(playPause(sender:)):
             return playerView.player != nil && textfield.currentEditor() == nil
         case #selector(seekForward(sender:)):

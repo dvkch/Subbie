@@ -144,6 +144,11 @@ CA
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Video" id="HyV-fh-RgO">
                                     <items>
+                                        <menuItem title="Open associated video…" keyEquivalent="O" id="JDN-sZ-CkE">
+                                            <connections>
+                                                <action selector="openVideoWithSender:" target="Ady-hI-5gd" id="ka5-nK-Ncl"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Play/Pause" keyEquivalent=" " id="snW-S8-Cw5">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
@@ -218,37 +223,11 @@ CA
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="Document Window Controller" showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Subtitler" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Subtitler" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="479" y="251" width="800" height="500"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="800" height="500"/>
-                        <toolbar key="toolbar" implicitIdentifier="7C425909-4B6F-433F-A536-376E821FA056" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="plb-2i-FYo">
-                            <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="E18FE345-564B-470F-A046-EA3AAB63A199" label="Open video" paletteLabel="Open video" image="movie-medium-m" title="Open video" sizingBehavior="auto" id="Fhw-vF-M21">
-                                    <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="Db5-16-J9e">
-                                        <rect key="frame" x="21" y="14" width="26" height="20"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <buttonCell key="cell" type="bevel" title="Open video" bezelStyle="rounded" image="movie-medium-m" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="KBT-cI-WxS">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                            <string key="keyEquivalent">O</string>
-                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="openVideoWithSender:" target="Oky-zY-oP4" id="7bs-gF-feg"/>
-                                        </connections>
-                                    </button>
-                                </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="4Sl-vD-PKw"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="QAt-xU-S2F"/>
-                            </allowedToolbarItems>
-                            <defaultToolbarItems>
-                                <toolbarItem reference="Fhw-vF-M21"/>
-                                <toolbarItem reference="QAt-xU-S2F"/>
-                            </defaultToolbarItems>
-                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -259,7 +238,7 @@ CA
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="420"/>
+            <point key="canvasLocation" x="74" y="455"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -277,13 +256,13 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-1O-CVB">
-                                                <rect key="frame" x="0.0" y="46" width="380" height="180"/>
+                                                <rect key="frame" x="0.0" y="46" width="380" height="162"/>
                                                 <clipView key="contentView" id="bus-Px-5FW">
-                                                    <rect key="frame" x="1" y="1" width="378" height="178"/>
+                                                    <rect key="frame" x="1" y="1" width="378" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" tableStyle="fullWidth" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" usesAutomaticRowHeights="YES" headerView="IK9-0e-Sxy" viewBased="YES" id="8su-3M-rp4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="150"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="132"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -458,7 +437,7 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Ef-s8W" customClass="PlayerView" customModule="Subtitler" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="419" height="114"/>
+                                                <rect key="frame" x="0.0" y="112" width="419" height="96"/>
                                             </avPlayerView>
                                             <button verticalHuggingPriority="750" springLoaded="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-6E-XRp" customClass="PressButton" customModule="Subtitler" customModuleProvider="target">
                                                 <rect key="frame" x="2" y="2" width="415" height="40"/>
@@ -512,7 +491,6 @@ CA
         </scene>
     </scenes>
     <resources>
-        <image name="movie-medium-m" width="25.5" height="20"/>
         <image name="stopwatch-medium-18pt" width="18" height="21"/>
     </resources>
 </document>
