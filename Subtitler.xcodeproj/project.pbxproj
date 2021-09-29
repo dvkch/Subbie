@@ -13,6 +13,7 @@
 		972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6A27032591005E9C3D /* NSTableView+SY.swift */; };
 		972CAB7327032591005E9C3D /* TimingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6E27032591005E9C3D /* TimingButton.swift */; };
 		972CAB7427032591005E9C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB7027032591005E9C3D /* ViewController.swift */; };
+		974B89FA2703E54300C615B7 /* Subtitles in Resources */ = {isa = PBXBuildFile; fileRef = 974B89F92703E54300C615B7 /* Subtitles */; };
 		974FAA742703223B008B539B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA732703223B008B539B /* AppDelegate.swift */; };
 		974FAA782703223B008B539B /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA772703223B008B539B /* Subtitle.swift */; };
 		974FAA7A2703223C008B539B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA792703223C008B539B /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		972CAB6A27032591005E9C3D /* NSTableView+SY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTableView+SY.swift"; sourceTree = "<group>"; };
 		972CAB6E27032591005E9C3D /* TimingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingButton.swift; sourceTree = "<group>"; };
 		972CAB7027032591005E9C3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		974B89F92703E54300C615B7 /* Subtitles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Subtitles; sourceTree = "<group>"; };
 		974FAA702703223B008B539B /* Subtitler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subtitler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		974FAA732703223B008B539B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		974FAA772703223B008B539B /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		97924980270351F900248C3D /* SubtitlerTests */ = {
 			isa = PBXGroup;
 			children = (
+				974B89F92703E54300C615B7 /* Subtitles */,
 				97924981270351FA00248C3D /* SubtitlerTests.swift */,
 			);
 			path = SubtitlerTests;
@@ -287,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974B89FA2703E54300C615B7 /* Subtitles in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

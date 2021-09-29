@@ -11,7 +11,6 @@ import SnapKit
 
 // TODO: show subtitles in video player
 // TODO: allow text editing (timings too ? with validation using binding and value transformer ?)
-// TODO: add parser/Writer specs, simple thing for nilpotence on valid input file
 // TODO: selectionner plusieurs lignes et demander de mapper time End = (n-1).timeStart
 // TODO: scroll dans le player sur selection d'une ligne
 

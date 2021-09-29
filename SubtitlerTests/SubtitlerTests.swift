@@ -6,27 +6,38 @@
 //
 
 import XCTest
+import Difference
+@testable import Subtitler
 
 class SubtitlerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var subtitles: [URL] {
+        let testBundle = Bundle(for: type(of: self))
+        let baseFolder = testBundle.url(forResource: "Subtitles", withExtension: nil)!
+        return try! FileManager.default.contentsOfDirectory(atPath: baseFolder.path).map { baseFolder.appendingPathComponent($0) }
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    private func normalizeData(_ data: Data) -> Data {
+        return String(data: data, encoding: .utf8)!
+            .replacingOccurrences(of: "\r\n", with: "\n")
+            .trimmingCharacters(in: .newlines)
+            .data(using: .utf8)!
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    
+    func testParserWriterNilpotency() throws {
+        for subtitle in subtitles {
+            let originalData = try Data(contentsOf: subtitle)
+            let parsedSubtitle = try SubRipParser.parse(data: originalData)
+            let writtenData = try SubRipParser.write(lines: parsedSubtitle)
+            
+            let linesDiff = diff(
+                String(data: normalizeData(originalData), encoding: .utf8)!.split(separator: "\n"),
+                String(data: normalizeData(writtenData), encoding: .utf8)!.split(separator: "\n")
+            )
+            XCTAssertTrue(
+                normalizeData(originalData) == normalizeData(writtenData),
+                "Found difference for \n" + linesDiff.joined(separator: ", ")
+            )
         }
     }
-
 }
