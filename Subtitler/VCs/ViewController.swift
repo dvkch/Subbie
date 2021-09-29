@@ -9,7 +9,7 @@ import Cocoa
 import AVKit
 import SnapKit
 
-// TODO: allow text editing (timings too ? with validation using binding and value transformer ?)
+// TODO: allow timing editing as text ? with validation using binding and value transformer ?
 
 class ViewController: NSViewController {
 
@@ -265,6 +265,13 @@ extension ViewController: NSTableViewDelegate {
         player.seek(to: min(desiredTime, maxTime))
     }
 
+    @IBAction private func tableViewLineTextFieldChanged(sender: AnyObject?) {
+        guard let field = sender as? NSTextField else { return }
+        let row = tableView.row(for: field)
+        guard row >= 0 else { return }
+        subtitle.updateText(for: row, text: field.stringValue)
+    }
+    
     // https://samwize.com/2018/11/27/drag-and-drop-to-reorder-nstableview/
     func tableView(_ tableView: NSTableView, pasteboardWriterForRow row: Int) -> NSPasteboardWriting? {
         let pasteboardItem = NSPasteboardItem()

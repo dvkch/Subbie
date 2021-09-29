@@ -119,6 +119,20 @@ class Subtitle: NSDocument {
         return newLineIndex
     }
     
+    func updateText(for lineIndex: Int, text: String) {
+        isTransient = false
+        updateChangeCount(.changeDone)
+        
+        let previousText = lines[lineIndex].text
+        lines[lineIndex].text = text.replacingOccurrences(of: "\n\n", with: "\n")
+
+        undoManager?.registerUndo(withTarget: self, handler: { selfTarget in
+            selfTarget.updateText(for: lineIndex, text: previousText)
+            selfTarget.contentViewController?.updateTableView()
+        })
+        undoManager?.setActionName("Update text")
+    }
+    
     func updateTimings(for lineIndex: Int, start: TimeInterval, end: TimeInterval) {
         isTransient = false
         updateChangeCount(.changeDone)
@@ -135,7 +149,7 @@ class Subtitle: NSDocument {
         })
         undoManager?.setActionName("Update timings")
     }
-    
+
     func move(from originalIndex: Int, to destinationIndex: Int) {
         isTransient = false
         updateChangeCount(.changeDone)
