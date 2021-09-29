@@ -21,6 +21,7 @@
 		97924982270351FA00248C3D /* SubtitlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924981270351FA00248C3D /* SubtitlerTests.swift */; };
 		97924989270374C700248C3D /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924988270374C700248C3D /* PlayerControlsView.swift */; };
 		9792498B2703802100248C3D /* Codable+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9792498A2703802100248C3D /* Codable+SY.swift */; };
+		97DF38302703F8FE002342CA /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF382F2703F8FE002342CA /* SubtitleView.swift */; };
 		97FAA54F270326DE00684B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA7B2703223C008B539B /* Main.storyboard */; };
 		BE094BE218015E44F9AF9DA8 /* Pods_SubtitlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5557C5A516A61C7EE6592BFD /* Pods_SubtitlerTests.framework */; };
 		E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */; };
@@ -60,6 +61,7 @@
 		97924981270351FA00248C3D /* SubtitlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitlerTests.swift; sourceTree = "<group>"; };
 		97924988270374C700248C3D /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
 		9792498A2703802100248C3D /* Codable+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+SY.swift"; sourceTree = "<group>"; };
+		97DF382F2703F8FE002342CA /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
 		DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.release.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.release.xcconfig"; sourceTree = "<group>"; };
 		EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtitler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 				97924988270374C700248C3D /* PlayerControlsView.swift */,
 				97027088270339EC001B5785 /* PlayerView.swift */,
 				972CAB6E27032591005E9C3D /* TimingButton.swift */,
+				97DF382F2703F8FE002342CA /* SubtitleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				97924989270374C700248C3D /* PlayerControlsView.swift in Sources */,
 				974FAA742703223B008B539B /* AppDelegate.swift in Sources */,
 				972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */,
+				97DF38302703F8FE002342CA /* SubtitleView.swift in Sources */,
 				9702708727033502001B5785 /* DocumentController.swift in Sources */,
 				97027089270339EC001B5785 /* PlayerView.swift in Sources */,
 				972CAB7327032591005E9C3D /* TimingButton.swift in Sources */,

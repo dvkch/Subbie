@@ -6,12 +6,35 @@
 //
 
 import AVKit
+import SnapKit
 
 protocol PlayerViewDelegate: NSObjectProtocol {
     func playerViewPlayingStatusChanged(_ playerView: PlayerView, playingStatus: Bool)
+    func playerViewRequestsSubtitle(_ playerView: PlayerView, time: TimeInterval) -> String?
 }
 
 class PlayerView: AVPlayerView {
+    
+    // MARK: Init
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup() {
+        subtitleView.text = nil
+        addSubview(subtitleView)
+        subtitleView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.left.greaterThanOrEqualToSuperview().offset(8)
+            make.bottom.lessThanOrEqualToSuperview().offset(-50)
+        }
+    }
     
     // MARK: Properties
     weak var delegate: PlayerViewDelegate?
@@ -42,6 +65,9 @@ class PlayerView: AVPlayerView {
         }
     }
     
+    // MARK: Views
+    private let subtitleView = SubtitleView()
+    
     // MARK: Actions
     func play() {
         player?.play()
@@ -53,12 +79,19 @@ class PlayerView: AVPlayerView {
     }
 
     // MARK: Observers
+    private var timeObserver: Any?
     private func addStatusObservers(to player: AVPlayer) {
         player.addObserver(self, forKeyPath: #keyPath(AVPlayer.rate), options: .new, context: nil)
+        timeObserver = player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 0.1, preferredTimescale: CMTimeScale(NSEC_PER_SEC)), queue: .main) { time in
+            self.subtitleView.text = self.delegate?.playerViewRequestsSubtitle(self, time: time.seconds)
+        }
     }
 
     private func removeStatusObservers(from player: AVPlayer) {
         player.removeObserver(self, forKeyPath: #keyPath(AVPlayer.rate), context: nil)
+        if let timeObserver = timeObserver {
+            player.removeTimeObserver(timeObserver)
+        }
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

@@ -132,6 +132,7 @@ class ViewController: NSViewController {
     private func updateVideoView() {
         if let url = videoURL {
             playerView.player = AVPlayer(url: url)
+            playerView.preferredSpeed = playerControlsView.selectedSpeeds
         } else {
             playerView.player = nil
         }
@@ -164,6 +165,13 @@ extension ViewController: PlayerViewDelegate {
     func playerViewPlayingStatusChanged(_ playerView: PlayerView, playingStatus: Bool) {
         updateTimingButton()
     }
+    
+    func playerViewRequestsSubtitle(_ playerView: PlayerView, time: TimeInterval) -> String? {
+        if timingButtonPressStart != nil && tableView.selectedRow >= 0 {
+            return subtitle.lines[tableView.selectedRow].text
+        }
+        return subtitle.lines.first(where: { $0.timeStart <= time && time <= $0.timeEnd })?.text
+    }
 }
 
 extension ViewController: PlayerControlsViewDelegate {
@@ -175,6 +183,7 @@ extension ViewController: PlayerControlsViewDelegate {
 extension ViewController: PressButtonDelegate {
     func pressButtonBeganPress(_ pressButton: PressButton) {
         timingButtonPressStart = playerView.player?.currentTime()
+        view.window?.makeFirstResponder(tableView)
     }
     
     func pressButtonEndedPress(_ pressButton: PressButton) {
@@ -192,6 +201,14 @@ extension ViewController: PressButtonDelegate {
         else {
             tableView.deselectAll(nil)
         }
+        
+        timingButtonPressStart = nil
+        timingButtonPressEnd = nil
+    }
+    
+    func pressButtonCanceledPress(_ pressButton: PressButton) {
+        timingButtonPressStart = nil
+        timingButtonPressEnd = nil
     }
 }
 

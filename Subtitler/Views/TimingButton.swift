@@ -9,6 +9,7 @@ import Cocoa
 
 protocol PressButtonDelegate: NSObjectProtocol {
     func pressButtonBeganPress(_ pressButton: PressButton)
+    func pressButtonCanceledPress(_ pressButton: PressButton)
     func pressButtonEndedPress(_ pressButton: PressButton)
 }
 
@@ -58,6 +59,9 @@ class PressButton: NSButton {
             
             if bounds.contains(gesture.location(in: self)) {
                 delegate?.pressButtonEndedPress(self)
+            }
+            else {
+                delegate?.pressButtonCanceledPress(self)
             }
 
         default:
