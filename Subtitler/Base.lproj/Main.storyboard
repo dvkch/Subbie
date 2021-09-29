@@ -228,8 +228,8 @@ CA
                                 <toolbarItem implicitItemIdentifier="E18FE345-564B-470F-A046-EA3AAB63A199" label="Open video" paletteLabel="Open video" image="movie-medium-m" title="Open video" sizingBehavior="auto" id="Fhw-vF-M21">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" id="Db5-16-J9e">
-                                        <rect key="frame" x="0.0" y="14" width="68" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <rect key="frame" x="21" y="14" width="26" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <buttonCell key="cell" type="bevel" title="Open video" bezelStyle="rounded" image="movie-medium-m" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="KBT-cI-WxS">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -277,13 +277,13 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-1O-CVB">
-                                                <rect key="frame" x="0.0" y="46" width="380" height="393"/>
+                                                <rect key="frame" x="0.0" y="46" width="380" height="180"/>
                                                 <clipView key="contentView" id="bus-Px-5FW">
-                                                    <rect key="frame" x="1" y="1" width="378" height="391"/>
+                                                    <rect key="frame" x="1" y="1" width="378" height="178"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" tableStyle="fullWidth" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" usesAutomaticRowHeights="YES" headerView="IK9-0e-Sxy" viewBased="YES" id="8su-3M-rp4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="363"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="150"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -305,9 +305,9 @@ CA
                                                                             <rect key="frame" x="8" y="0.0" width="146" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-sz-zwD">
-                                                                                    <rect key="frame" x="0.0" y="1" width="146" height="16"/>
-                                                                                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Sample text" id="oNC-L2-X9N">
+                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-sz-zwD">
+                                                                                    <rect key="frame" x="2" y="2" width="142" height="32"/>
+                                                                                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Sample line with very long text" id="oNC-L2-X9N">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -318,10 +318,10 @@ CA
                                                                                 </textField>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="bottom" secondItem="XT2-sz-zwD" secondAttribute="bottom" constant="1" id="KBP-Y4-W0c"/>
-                                                                                <constraint firstItem="XT2-sz-zwD" firstAttribute="leading" secondItem="B9k-E3-fIe" secondAttribute="leading" constant="2" id="MhA-Wr-0q9"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="XT2-sz-zwD" secondAttribute="trailing" constant="2" id="Vmv-fc-YlM"/>
-                                                                                <constraint firstItem="XT2-sz-zwD" firstAttribute="top" secondItem="B9k-E3-fIe" secondAttribute="top" constant="1" id="hqs-zR-xuy"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="XT2-sz-zwD" secondAttribute="bottom" constant="2" id="KBP-Y4-W0c"/>
+                                                                                <constraint firstItem="XT2-sz-zwD" firstAttribute="leading" secondItem="B9k-E3-fIe" secondAttribute="leading" constant="4" id="MhA-Wr-0q9"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="XT2-sz-zwD" secondAttribute="trailing" constant="4" id="Vmv-fc-YlM"/>
+                                                                                <constraint firstItem="XT2-sz-zwD" firstAttribute="top" secondItem="B9k-E3-fIe" secondAttribute="top" constant="2" id="hqs-zR-xuy"/>
                                                                             </constraints>
                                                                             <connections>
                                                                                 <outlet property="textField" destination="XT2-sz-zwD" id="7ur-pj-Wln"/>
@@ -345,7 +345,7 @@ CA
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="188-ez-w1B">
-                                                                                    <rect key="frame" x="0.0" y="1" width="92" height="16"/>
+                                                                                    <rect key="frame" x="0.0" y="2" width="92" height="16"/>
                                                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="00:00:00,000" id="JDl-Eh-GhD">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -357,8 +357,8 @@ CA
                                                                                 </textField>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="bottom" secondItem="188-ez-w1B" secondAttribute="bottom" constant="1" id="Miz-fV-srx"/>
-                                                                                <constraint firstItem="188-ez-w1B" firstAttribute="top" secondItem="uP0-HO-tDm" secondAttribute="top" constant="1" id="vLf-7X-Rsl"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="188-ez-w1B" secondAttribute="bottom" constant="2" id="Miz-fV-srx"/>
+                                                                                <constraint firstItem="188-ez-w1B" firstAttribute="top" secondItem="uP0-HO-tDm" secondAttribute="top" constant="2" id="vLf-7X-Rsl"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="188-ez-w1B" secondAttribute="trailing" constant="2" id="wTI-kb-zrJ"/>
                                                                                 <constraint firstItem="188-ez-w1B" firstAttribute="leading" secondItem="uP0-HO-tDm" secondAttribute="leading" constant="2" id="wUa-G7-O3q"/>
                                                                             </constraints>
@@ -384,7 +384,7 @@ CA
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="BYF-mF-SfB">
-                                                                                    <rect key="frame" x="0.0" y="1" width="89" height="16"/>
+                                                                                    <rect key="frame" x="0.0" y="2" width="89" height="16"/>
                                                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="00:00:00,000" id="yFc-uF-aq1">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -396,9 +396,9 @@ CA
                                                                                 </textField>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstItem="BYF-mF-SfB" firstAttribute="top" secondItem="J9u-Kf-cUs" secondAttribute="top" constant="1" id="BxH-sO-Kak"/>
+                                                                                <constraint firstItem="BYF-mF-SfB" firstAttribute="top" secondItem="J9u-Kf-cUs" secondAttribute="top" constant="2" id="BxH-sO-Kak"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="BYF-mF-SfB" secondAttribute="trailing" constant="2" id="Nvt-MN-aV9"/>
-                                                                                <constraint firstAttribute="bottom" secondItem="BYF-mF-SfB" secondAttribute="bottom" constant="1" id="cbC-lD-ZiD"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="BYF-mF-SfB" secondAttribute="bottom" constant="2" id="cbC-lD-ZiD"/>
                                                                                 <constraint firstItem="BYF-mF-SfB" firstAttribute="leading" secondItem="J9u-Kf-cUs" secondAttribute="leading" constant="2" id="jtc-J6-qeo"/>
                                                                             </constraints>
                                                                             <connections>
@@ -458,7 +458,7 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Ef-s8W" customClass="PlayerView" customModule="Subtitler" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="419" height="327"/>
+                                                <rect key="frame" x="0.0" y="112" width="419" height="114"/>
                                             </avPlayerView>
                                             <button verticalHuggingPriority="750" springLoaded="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-6E-XRp" customClass="PressButton" customModule="Subtitler" customModuleProvider="target">
                                                 <rect key="frame" x="2" y="2" width="415" height="40"/>
@@ -512,7 +512,7 @@ CA
         </scene>
     </scenes>
     <resources>
-        <image name="movie-medium-m" width="40.5" height="32"/>
+        <image name="movie-medium-m" width="25.5" height="20"/>
         <image name="stopwatch-medium-18pt" width="18" height="21"/>
     </resources>
 </document>

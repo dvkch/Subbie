@@ -9,10 +9,9 @@ import Cocoa
 import AVKit
 import SnapKit
 
-// TODO: show subtitles in video player
-// TODO: allow text editing (timings too ? with validation using binding and value transformer ?)
-// TODO: selectionner plusieurs lignes et demander de mapper time End = (n-1).timeStart
 // TODO: scroll dans le player sur selection d'une ligne
+// TODO: selectionner plusieurs lignes et demander de mapper time End = (n-1).timeStart
+// TODO: allow text editing (timings too ? with validation using binding and value transformer ?)
 
 class ViewController: NSViewController {
 
@@ -132,7 +131,7 @@ class ViewController: NSViewController {
     private func updateVideoView() {
         if let url = videoURL {
             playerView.player = AVPlayer(url: url)
-            playerView.preferredSpeed = playerControlsView.selectedSpeeds
+            playerView.preferredSpeed = playerControlsView.selectedSpeed
         } else {
             playerView.player = nil
         }

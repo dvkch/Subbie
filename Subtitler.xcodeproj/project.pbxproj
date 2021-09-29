@@ -138,8 +138,8 @@
 			children = (
 				97924988270374C700248C3D /* PlayerControlsView.swift */,
 				97027088270339EC001B5785 /* PlayerView.swift */,
-				972CAB6E27032591005E9C3D /* TimingButton.swift */,
 				97DF382F2703F8FE002342CA /* SubtitleView.swift */,
+				972CAB6E27032591005E9C3D /* TimingButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
