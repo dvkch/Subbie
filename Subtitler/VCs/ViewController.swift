@@ -9,7 +9,6 @@ import Cocoa
 import AVKit
 import SnapKit
 
-// TODO: selectionner plusieurs lignes et demander de mapper time End = (n-1).timeStart
 // TODO: allow text editing (timings too ? with validation using binding and value transformer ?)
 
 class ViewController: NSViewController {
@@ -117,6 +116,27 @@ class ViewController: NSViewController {
         super.keyDown(with: event)
     }
     
+    @IBAction private func matchEndTimeToNextStart(sender: AnyObject?) {
+        guard tableView.selectedRow >= 0 && tableView.selectedRow < subtitle.lines.count - 1 else { return }
+
+        subtitle.updateTimings(
+            for: tableView.selectedRow,
+            start: subtitle.lines[tableView.selectedRow].timeStart,
+            end: subtitle.lines[tableView.selectedRow + 1].timeStart
+        )
+        tableView.reloadData(forRowIndexes: IndexSet(integer: tableView.selectedRow), columnIndexes: IndexSet(integersIn: 0...2))
+        selectNextRow(deselectIfLast: false)
+    }
+    
+    private func selectNextRow(deselectIfLast: Bool) {
+        if tableView.selectedRow < tableView.numberOfRows - 1 {
+            tableView.selectRowIndexes(IndexSet(integer: tableView.selectedRow + 1), byExtendingSelection: false)
+        }
+        else if deselectIfLast {
+            tableView.deselectAll(nil)
+        }
+    }
+    
     // MARK: Content
     private func updateContent() {
         updateTableView()
@@ -156,6 +176,8 @@ extension ViewController: NSMenuItemValidation {
             return playerView.player != nil && textfield.currentEditor() == nil
         case #selector(removeLine(sender:)):
             return tableView.selectedRow >= 0
+        case #selector(matchEndTimeToNextStart(sender:)):
+            return tableView.selectedRow >= 0 && tableView.selectedRow < subtitle.lines.count - 1
         default:
             return false
         }
@@ -196,13 +218,9 @@ extension ViewController: PressButtonDelegate {
         tableView.reloadData(forRowIndexes: IndexSet(integer: tableView.selectedRow), columnIndexes: IndexSet(integersIn: 0...2))
         
         // update selection
-        if tableView.selectedRow < tableView.numberOfRows - 1 {
-            tableView.selectRowIndexes(IndexSet(integer: tableView.selectedRow + 1), byExtendingSelection: false)
-        }
-        else {
-            tableView.deselectAll(nil)
-        }
+        selectNextRow(deselectIfLast: true)
         
+        // reset state
         timingButtonPressStart = nil
         timingButtonPressEnd = nil
     }

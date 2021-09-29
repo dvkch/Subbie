@@ -123,6 +123,12 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="WRV-NI-Exz"/>
+                                        <menuItem title="Match end time to next item start time" keyEquivalent="M" id="J6y-m4-aDk">
+                                            <connections>
+                                                <action selector="matchEndTimeToNextStartWithSender:" target="Ady-hI-5gd" id="DtH-9e-sWb"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="3es-MR-fqZ"/>
                                         <menuItem title="Delete" id="pa3-QI-u2k">
                                             <string key="keyEquivalent" base64-UTF8="YES">
 CA
