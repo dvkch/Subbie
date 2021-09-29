@@ -6,6 +6,11 @@ target "Subtitler" do
     pod 'SnapKit'
 end
 
+target "SubtitlerTests" do
+    platform :osx, "10.13"
+    pod 'Difference'
+end
+
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|

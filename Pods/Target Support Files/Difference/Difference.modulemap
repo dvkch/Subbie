@@ -1,0 +1,6 @@
+framework module Difference {
+  umbrella header "Difference-umbrella.h"
+
+  export *
+  module * { export * }
+}
