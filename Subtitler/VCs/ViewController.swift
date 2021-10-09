@@ -125,12 +125,24 @@ class ViewController: NSViewController {
             end: subtitle.lines[tableView.selectedRow + 1].timeStart
         )
         tableView.reloadData(forRowIndexes: IndexSet(integer: tableView.selectedRow), columnIndexes: IndexSet(integersIn: 0...2))
-        selectNextRow(deselectIfLast: false)
+        selectNextRow(deselectIfLast: false, scrollToCenter: true, animated: false)
     }
     
-    private func selectNextRow(deselectIfLast: Bool) {
+    private func selectNextRow(deselectIfLast: Bool, scrollToCenter: Bool, animated: Bool) {
         if tableView.selectedRow < tableView.numberOfRows - 1 {
             tableView.selectRowIndexes(IndexSet(integer: tableView.selectedRow + 1), byExtendingSelection: false)
+            let rowRect = tableView.frameOfCell(atColumn: 0, row: tableView.selectedRow)
+            if scrollToCenter, let scrollView = tableView.enclosingScrollView, rowRect != .zero {
+                let centeredPoint = NSMakePoint(0.0, rowRect.minY + (rowRect.height / 2) - ((scrollView.frame.height) / 2))
+                if animated {
+                    scrollView.contentView.animator().setBoundsOrigin(centeredPoint)
+                } else {
+                    tableView.scroll(centeredPoint)
+                }
+            }
+            else if !scrollToCenter {
+                tableView.scrollRowToVisible(tableView.selectedRow)
+            }
         }
         else if deselectIfLast {
             tableView.deselectAll(nil)
@@ -218,7 +230,7 @@ extension ViewController: PressButtonDelegate {
         tableView.reloadData(forRowIndexes: IndexSet(integer: tableView.selectedRow), columnIndexes: IndexSet(integersIn: 0...2))
         
         // update selection
-        selectNextRow(deselectIfLast: true)
+        selectNextRow(deselectIfLast: true, scrollToCenter: true, animated: true)
         
         // reset state
         timingButtonPressStart = nil
