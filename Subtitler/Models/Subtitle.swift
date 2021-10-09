@@ -36,8 +36,7 @@ class Subtitle: NSDocument {
                 .split(separator: "\n")
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
                 .filter { !$0.isEmpty }
-                .enumerated()
-                .map { line in Line(text: String(line.element), timeStart: TimeInterval(line.offset), timeEnd: TimeInterval(line.offset)) }
+                .map { line in Line(text: String(line), timeStart: 0, timeEnd: 0) }
 
             isTransient = false
             fileURL = nil
