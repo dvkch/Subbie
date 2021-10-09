@@ -77,6 +77,12 @@ class PlayerView: AVPlayerView {
     func pause() {
         player?.pause()
     }
+    
+    // MARK: Layout
+    override func layout() {
+        bringSubviewToFront(subtitleView)
+        super.layout()
+    }
 
     // MARK: Observers
     private var timeObserver: Any?

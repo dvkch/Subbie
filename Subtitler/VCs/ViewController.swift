@@ -80,7 +80,7 @@ class ViewController: NSViewController {
         panel.resolvesAliases = true
         panel.prompt = "Open video file"
         panel.allowsMultipleSelection = false
-        panel.allowedFileTypes = ["mp4", "mov"]
+        panel.allowedFileTypes = ["mp4", "mov", "m4a", "mp3", "aac"]
         panel.beginSheetModal(for: window) { response in
             if (response == .OK) {
                 self.videoURL = panel.url

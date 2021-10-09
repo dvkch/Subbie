@@ -17,6 +17,7 @@
 		974FAA742703223B008B539B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA732703223B008B539B /* AppDelegate.swift */; };
 		974FAA782703223B008B539B /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974FAA772703223B008B539B /* Subtitle.swift */; };
 		974FAA7A2703223C008B539B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA792703223C008B539B /* Assets.xcassets */; };
+		97920DAA2711C8D100D9F678 /* NSView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97920DA92711C8D100D9F678 /* NSView+SY.swift */; };
 		9792497A2703473900248C3D /* SubRipParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979249792703473900248C3D /* SubRipParser.swift */; };
 		97924982270351FA00248C3D /* SubtitlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924981270351FA00248C3D /* SubtitlerTests.swift */; };
 		97924989270374C700248C3D /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924988270374C700248C3D /* PlayerControlsView.swift */; };
@@ -57,6 +58,7 @@
 		974FAA7C2703223C008B539B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		974FAA7E2703223C008B539B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		974FAA7F2703223C008B539B /* Subtitler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Subtitler.entitlements; sourceTree = "<group>"; };
+		97920DA92711C8D100D9F678 /* NSView+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+SY.swift"; sourceTree = "<group>"; };
 		979249792703473900248C3D /* SubRipParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRipParser.swift; sourceTree = "<group>"; };
 		9792497F270351F900248C3D /* SubtitlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtitlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97924981270351FA00248C3D /* SubtitlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitlerTests.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				9792498A2703802100248C3D /* Codable+SY.swift */,
 				972CAB6A27032591005E9C3D /* NSTableView+SY.swift */,
+				97920DA92711C8D100D9F678 /* NSView+SY.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				9702708727033502001B5785 /* DocumentController.swift in Sources */,
 				97027089270339EC001B5785 /* PlayerView.swift in Sources */,
 				972CAB7327032591005E9C3D /* TimingButton.swift in Sources */,
+				97920DAA2711C8D100D9F678 /* NSView+SY.swift in Sources */,
 				972CAB7427032591005E9C3D /* ViewController.swift in Sources */,
 				9792498B2703802100248C3D /* Codable+SY.swift in Sources */,
 				974FAA782703223B008B539B /* Subtitle.swift in Sources */,
