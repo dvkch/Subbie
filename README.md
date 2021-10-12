@@ -18,6 +18,7 @@ Currently supported features:
 - undo/redo
 - showing the subtitle preview while playing the associated video
 - select a playback speed for the associated video
+- delay all lines using a fixed offset
 
 Planned features, if time permits:
 

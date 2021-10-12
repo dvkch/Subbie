@@ -153,6 +153,22 @@ class Subtitle: NSDocument {
         })
         undoManager?.setActionName("Update timings")
     }
+    
+    func offsetAllLines(delay: TimeInterval) {
+        isTransient = false
+        updateChangeCount(.changeDone)
+        
+        (0..<lines.count).forEach {
+            lines[$0].timeStart += delay
+            lines[$0].timeEnd += delay
+        }
+
+        undoManager?.registerUndo(withTarget: self, handler: { selfTarget in
+            selfTarget.offsetAllLines(delay: -delay)
+            selfTarget.contentViewController?.updateTableView()
+        })
+        undoManager?.setActionName("Offset all lines")
+    }
 
     func move(from originalIndex: Int, to destinationIndex: Int) {
         isTransient = false

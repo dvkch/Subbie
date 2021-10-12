@@ -128,6 +128,33 @@ class ViewController: NSViewController {
         selectNextRow(deselectIfLast: false, scrollToCenter: true, animated: false)
     }
     
+    @IBAction private func delaySubtitles(sender: AnyObject?) {
+        let alert = NSAlert()
+
+        let okButton = alert.addButton(withTitle: "Delay")
+        let cancelButton = alert.addButton(withTitle: "Cancel")
+        alert.messageText = "Input a delay in seconds to offset all lines in this subtitles"
+        alert.informativeText = "Use a minus (-) sign for a negative offset and a dot (.) as decimal separator"
+        
+        let textField = NSTextField(frame: NSRect(x: 0, y: 0, width: 120, height: NSTextField().intrinsicContentSize.height))
+        textField.stringValue = "0.000"
+        textField.isBezeled = true
+        textField.bezelStyle = .roundedBezel
+
+        alert.accessoryView = textField
+        alert.window.initialFirstResponder = alert.accessoryView
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            textField.nextKeyView = okButton
+            cancelButton.nextKeyView = textField
+        }
+
+        if alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn {
+            let value = TimeInterval(textField.stringValue) ?? 0
+            subtitle.offsetAllLines(delay: value)
+        }
+    }
+    
     private func selectNextRow(deselectIfLast: Bool, scrollToCenter: Bool, animated: Bool) {
         if tableView.selectedRow < tableView.numberOfRows - 1 {
             tableView.selectRowIndexes(IndexSet(integer: tableView.selectedRow + 1), byExtendingSelection: false)
@@ -178,6 +205,8 @@ class ViewController: NSViewController {
 extension ViewController: NSMenuItemValidation {
     func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
         switch menuItem.action {
+        case #selector(delaySubtitles(sender:)):
+            return true
         case #selector(openVideo(sender:)):
             return true
         case #selector(playPause(sender:)):
