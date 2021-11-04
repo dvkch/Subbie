@@ -19,7 +19,7 @@ class ViewController: NSViewController {
         representedObject = representedObject ?? Subtitle()
         tableView.registerForDraggedTypes([subtitleLineKind])
         tableView.doubleAction = #selector(tableViewDoubleClicked(sender:))
-        playerView.delegate = self
+        playerView.playerDelegate = self
         playerControlsView.delegate = self
         timingButton.delegate = self
     }

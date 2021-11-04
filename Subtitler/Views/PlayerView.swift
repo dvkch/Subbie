@@ -37,7 +37,7 @@ class PlayerView: AVPlayerView {
     }
     
     // MARK: Properties
-    weak var delegate: PlayerViewDelegate?
+    weak var playerDelegate: PlayerViewDelegate?
     override var player: AVPlayer? {
         didSet {
             if let oldValue = oldValue {
@@ -46,7 +46,7 @@ class PlayerView: AVPlayerView {
             if let player = player {
                 addStatusObservers(to: player)
             }
-            delegate?.playerViewPlayingStatusChanged(self, playingStatus: isPlaying)
+            playerDelegate?.playerViewPlayingStatusChanged(self, playingStatus: isPlaying)
 
             // https://github.com/w0lfschild/macOS_headers/blob/a5c2da62810189aa7ea71e6a3e1c98d98bb6620e/macOS/Frameworks/AVKit/587/AVPlayerView.h#L277
             // toggle to force reloading
@@ -89,7 +89,7 @@ class PlayerView: AVPlayerView {
     private func addStatusObservers(to player: AVPlayer) {
         player.addObserver(self, forKeyPath: #keyPath(AVPlayer.rate), options: .new, context: nil)
         timeObserver = player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 0.1, preferredTimescale: CMTimeScale(NSEC_PER_SEC)), queue: .main) { time in
-            self.subtitleView.text = self.delegate?.playerViewRequestsSubtitle(self, time: time.seconds)
+            self.subtitleView.text = self.playerDelegate?.playerViewRequestsSubtitle(self, time: time.seconds)
         }
     }
 
@@ -103,7 +103,7 @@ class PlayerView: AVPlayerView {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == #keyPath(AVPlayer.rate) {
             DispatchQueue.main.async {
-                self.delegate?.playerViewPlayingStatusChanged(self, playingStatus: self.isPlaying)
+                self.playerDelegate?.playerViewPlayingStatusChanged(self, playingStatus: self.isPlaying)
             }
             return
         }
