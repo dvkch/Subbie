@@ -24,6 +24,7 @@
 		97924982270351FA00248C3D /* SubtitlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924981270351FA00248C3D /* SubtitlerTests.swift */; };
 		97924989270374C700248C3D /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97924988270374C700248C3D /* PlayerControlsView.swift */; };
 		9792498B2703802100248C3D /* Codable+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9792498A2703802100248C3D /* Codable+SY.swift */; };
+		97A49D9827130B1A007844C8 /* SpectralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A49D9727130B1A007844C8 /* SpectralView.swift */; };
 		97DF38302703F8FE002342CA /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF382F2703F8FE002342CA /* SubtitleView.swift */; };
 		97DF3834270407F7002342CA /* SizingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF3833270407F7002342CA /* SizingTextField.swift */; };
 		97FAA54F270326DE00684B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA7B2703223C008B539B /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		97924981270351FA00248C3D /* SubtitlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitlerTests.swift; sourceTree = "<group>"; };
 		97924988270374C700248C3D /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
 		9792498A2703802100248C3D /* Codable+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+SY.swift"; sourceTree = "<group>"; };
+		97A49D9727130B1A007844C8 /* SpectralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectralView.swift; sourceTree = "<group>"; };
 		97DF382F2703F8FE002342CA /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
 		97DF3833270407F7002342CA /* SizingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizingTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 				97924988270374C700248C3D /* PlayerControlsView.swift */,
 				97027088270339EC001B5785 /* PlayerView.swift */,
 				97DF3833270407F7002342CA /* SizingTextField.swift */,
+				97A49D9727130B1A007844C8 /* SpectralView.swift */,
 				97DF382F2703F8FE002342CA /* SubtitleView.swift */,
 				972CAB6E27032591005E9C3D /* TimingButton.swift */,
 			);
@@ -315,6 +318,7 @@
 				972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */,
 				97DF38302703F8FE002342CA /* SubtitleView.swift in Sources */,
 				9702708727033502001B5785 /* DocumentController.swift in Sources */,
+				97A49D9827130B1A007844C8 /* SpectralView.swift in Sources */,
 				97027089270339EC001B5785 /* PlayerView.swift in Sources */,
 				972CAB7327032591005E9C3D /* TimingButton.swift in Sources */,
 				97920DAA2711C8D100D9F678 /* NSView+SY.swift in Sources */,
