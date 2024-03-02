@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="101304" identifier="macosx"/>
-        <plugIn identifier="com.apple.AVKitIBPlugin" version="19162"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19162"/>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="22505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -267,13 +267,13 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-1O-CVB">
-                                                <rect key="frame" x="0.0" y="46" width="380" height="353"/>
+                                                <rect key="frame" x="0.0" y="46" width="380" height="303"/>
                                                 <clipView key="contentView" id="bus-Px-5FW">
-                                                    <rect key="frame" x="1" y="1" width="378" height="351"/>
+                                                    <rect key="frame" x="1" y="1" width="378" height="301"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" tableStyle="fullWidth" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" usesAutomaticRowHeights="YES" headerView="IK9-0e-Sxy" viewBased="YES" id="8su-3M-rp4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="323"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="273"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -295,7 +295,7 @@ CA
                                                                             <rect key="frame" x="8" y="0.0" width="146" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-sz-zwD" customClass="SizingTextField" customModule="Subtitler" customModuleProvider="target">
+                                                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-sz-zwD" customClass="SizingTextField" customModule="Subtitler" customModuleProvider="target">
                                                                                     <rect key="frame" x="2" y="2" width="142" height="16"/>
                                                                                     <textFieldCell key="cell" selectable="YES" editable="YES" allowsUndo="NO" title="Sample line with very long text" id="oNC-L2-X9N">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -335,7 +335,7 @@ CA
                                                                             <rect key="frame" x="171" y="0.0" width="92" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="188-ez-w1B">
+                                                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="188-ez-w1B">
                                                                                     <rect key="frame" x="0.0" y="2" width="92" height="16"/>
                                                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="00:00:00,000" id="JDl-Eh-GhD">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -374,7 +374,7 @@ CA
                                                                             <rect key="frame" x="280" y="0.0" width="89" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="BYF-mF-SfB">
+                                                                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="BYF-mF-SfB">
                                                                                     <rect key="frame" x="0.0" y="2" width="89" height="16"/>
                                                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="00:00:00,000" id="yFc-uF-aq1">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -419,7 +419,7 @@ CA
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableHeaderView>
                                             </scrollView>
-                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zCx-QZ-uze">
+                                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zCx-QZ-uze">
                                                 <rect key="frame" x="8" y="8" width="364" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5ok-jJ-9v5"/>
@@ -449,9 +449,9 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Ef-s8W" customClass="PlayerView" customModule="Subtitler" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="419" height="287"/>
+                                                <rect key="frame" x="0.0" y="112" width="419" height="237"/>
                                             </avPlayerView>
-                                            <button verticalHuggingPriority="750" springLoaded="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-6E-XRp" customClass="PressButton" customModule="Subtitler" customModuleProvider="target">
+                                            <button springLoaded="YES" imageHugsTitle="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-6E-XRp" customClass="PressButton" customModule="Subtitler" customModuleProvider="target">
                                                 <rect key="frame" x="2" y="2" width="415" height="40"/>
                                                 <buttonCell key="cell" type="push" title=" Update timing" bezelStyle="rounded" image="stopwatch-medium-18pt" imagePosition="leading" alignment="center" controlSize="large" continuous="YES" borderStyle="border" inset="2" id="Fr3-0u-mxz">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
