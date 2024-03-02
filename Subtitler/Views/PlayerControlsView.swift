@@ -37,6 +37,7 @@ class PlayerControlsView: NSControl {
     }
     
     // MARK: Properties
+    private static let speeds: [(String, Float)] = [("2x", 2), ("1x", 1), ("0.5x", 0.5), ("0.25x", 0.25)]
     weak var delegate: PlayerControlsViewDelegate?
     override var isEnabled: Bool {
         didSet {
@@ -50,11 +51,14 @@ class PlayerControlsView: NSControl {
     }
     
     // MARK: Views
-    private let speedSegmentedControl = NSSegmentedControl(labels: ["2x", "1x", "0.5x", "0.25x"], trackingMode: .selectOne, target: nil, action: #selector(speedSegmentedControlChanged))
+    private let speedSegmentedControl = NSSegmentedControl(
+        labels: PlayerControlsView.speeds.map(\.0),
+        trackingMode: .selectOne,
+        target: nil, action: #selector(speedSegmentedControlChanged)
+    )
     
     // MARK: Actions
     @objc private func speedSegmentedControlChanged() {
-        let speeds: [Float] = [2, 1, 0.5, 0.25]
-        selectedSpeed = speeds[speedSegmentedControl.selectedSegment]
+        selectedSpeed = PlayerControlsView.speeds[speedSegmentedControl.selectedSegment].1
     }
 }
