@@ -9,19 +9,19 @@ import Cocoa
 
 // https://stackoverflow.com/a/54310657/1439489
 extension NSView {
-    func bringSubviewToFront(_ view: NSView) {
-        var theView = view
-        self.sortSubviews({(viewA,viewB,rawPointer) in
-            let view = rawPointer?.load(as: NSView.self)
-
-            switch view {
-            case viewA:
+    func bringSubviewToFront(_ subview: NSView) {
+        self.sortSubviews({ (viewA, viewB, subviewID) in
+            if viewA.uniqueID == subviewID {
                 return ComparisonResult.orderedDescending
-            case viewB:
-                return ComparisonResult.orderedAscending
-            default:
-                return ComparisonResult.orderedSame
             }
-        }, context: &theView)
+            if viewB.uniqueID == subviewID {
+                return ComparisonResult.orderedAscending
+            }
+            return ComparisonResult.orderedSame
+        }, context: subview.uniqueID)
+    }
+    
+    private var uniqueID: UnsafeMutableRawPointer {
+        return Unmanaged.passUnretained(self).toOpaque()
     }
 }
