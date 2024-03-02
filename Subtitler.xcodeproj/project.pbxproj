@@ -10,6 +10,8 @@
 		9702708427032EA9001B5785 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9702708327032EA9001B5785 /* AppError.swift */; };
 		9702708727033502001B5785 /* DocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9702708627033502001B5785 /* DocumentController.swift */; };
 		97027089270339EC001B5785 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97027088270339EC001B5785 /* PlayerView.swift */; };
+		970B47332B934E1A00A25FDC /* Difference in Frameworks */ = {isa = PBXBuildFile; productRef = 970B47322B934E1A00A25FDC /* Difference */; };
+		970B47362B934E3500A25FDC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 970B47352B934E3500A25FDC /* SnapKit */; };
 		972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6A27032591005E9C3D /* NSTableView+SY.swift */; };
 		972CAB7327032591005E9C3D /* TimingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6E27032591005E9C3D /* TimingButton.swift */; };
 		972CAB7427032591005E9C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB7027032591005E9C3D /* ViewController.swift */; };
@@ -25,8 +27,6 @@
 		97DF38302703F8FE002342CA /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF382F2703F8FE002342CA /* SubtitleView.swift */; };
 		97DF3834270407F7002342CA /* SizingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF3833270407F7002342CA /* SizingTextField.swift */; };
 		97FAA54F270326DE00684B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA7B2703223C008B539B /* Main.storyboard */; };
-		BE094BE218015E44F9AF9DA8 /* Pods_SubtitlerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5557C5A516A61C7EE6592BFD /* Pods_SubtitlerTests.framework */; };
-		E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D663F687E9DBD75298B2755 /* Pods-Subtitler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.debug.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.debug.xcconfig"; sourceTree = "<group>"; };
-		39D0BC9E388B258073C3BCC7 /* Pods-SubtitlerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubtitlerTests.release.xcconfig"; path = "Target Support Files/Pods-SubtitlerTests/Pods-SubtitlerTests.release.xcconfig"; sourceTree = "<group>"; };
-		5557C5A516A61C7EE6592BFD /* Pods_SubtitlerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubtitlerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73CB8A47F25EBCBAEB6A4E74 /* Pods-SubtitlerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubtitlerTests.debug.xcconfig"; path = "Target Support Files/Pods-SubtitlerTests/Pods-SubtitlerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9702708327032EA9001B5785 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		9702708627033502001B5785 /* DocumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentController.swift; sourceTree = "<group>"; };
 		97027088270339EC001B5785 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
@@ -66,8 +62,6 @@
 		9792498A2703802100248C3D /* Codable+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+SY.swift"; sourceTree = "<group>"; };
 		97DF382F2703F8FE002342CA /* SubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleView.swift; sourceTree = "<group>"; };
 		97DF3833270407F7002342CA /* SizingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizingTextField.swift; sourceTree = "<group>"; };
-		DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subtitler.release.xcconfig"; path = "Target Support Files/Pods-Subtitler/Pods-Subtitler.release.xcconfig"; sourceTree = "<group>"; };
-		EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subtitler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E79833F0C546FA7BCAC3E406 /* Pods_Subtitler.framework in Frameworks */,
+				970B47362B934E3500A25FDC /* SnapKit in Frameworks */,
+				970B47332B934E1A00A25FDC /* Difference in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,33 +78,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE094BE218015E44F9AF9DA8 /* Pods_SubtitlerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1AFF3D4355275DEC7EE7851C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EF6E0DDF2787536935001AC8 /* Pods_Subtitler.framework */,
-				5557C5A516A61C7EE6592BFD /* Pods_SubtitlerTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		62CB37C0F8D3311101F9052C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2D663F687E9DBD75298B2755 /* Pods-Subtitler.debug.xcconfig */,
-				DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */,
-				73CB8A47F25EBCBAEB6A4E74 /* Pods-SubtitlerTests.debug.xcconfig */,
-				39D0BC9E388B258073C3BCC7 /* Pods-SubtitlerTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		97027085270334F2001B5785 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +138,6 @@
 				974FAA722703223B008B539B /* Subtitler */,
 				97924980270351F900248C3D /* SubtitlerTests */,
 				974FAA712703223B008B539B /* Products */,
-				62CB37C0F8D3311101F9052C /* Pods */,
-				1AFF3D4355275DEC7EE7851C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,18 +183,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 974FAA822703223C008B539B /* Build configuration list for PBXNativeTarget "Subtitler" */;
 			buildPhases = (
-				4A11264A9711B98E22E06BFB /* [CP] Check Pods Manifest.lock */,
 				972CAB75270325B4005E9C3D /* TODOs */,
 				974FAA6C2703223B008B539B /* Sources */,
 				974FAA6D2703223B008B539B /* Frameworks */,
 				974FAA6E2703223B008B539B /* Resources */,
-				BB8A73F0AA7F023FC3296212 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Subtitler;
+			packageProductDependencies = (
+				970B47322B934E1A00A25FDC /* Difference */,
+				970B47352B934E3500A25FDC /* SnapKit */,
+			);
 			productName = Subtitler;
 			productReference = 974FAA702703223B008B539B /* Subtitler.app */;
 			productType = "com.apple.product-type.application";
@@ -231,11 +205,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97924985270351FA00248C3D /* Build configuration list for PBXNativeTarget "SubtitlerTests" */;
 			buildPhases = (
-				3A6A6A9269C6EE11FA05A387 /* [CP] Check Pods Manifest.lock */,
 				9792497B270351F900248C3D /* Sources */,
 				9792497C270351F900248C3D /* Frameworks */,
 				9792497D270351F900248C3D /* Resources */,
-				E6E511B5F1B77C27B7515B70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,6 +247,10 @@
 				Base,
 			);
 			mainGroup = 974FAA672703223B008B539B;
+			packageReferences = (
+				970B47312B934E1A00A25FDC /* XCRemoteSwiftPackageReference "Difference" */,
+				970B47342B934E3500A25FDC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 974FAA712703223B008B539B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -306,50 +282,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A6A6A9269C6EE11FA05A387 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SubtitlerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4A11264A9711B98E22E06BFB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Subtitler-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		972CAB75270325B4005E9C3D /* TODOs */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,40 +299,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\ndeclare -a TAGS=(\"TODO:\" \"FIXME:\" \"ASK:\" \"WAITING:\" \"LATER:\")\necho \"searching ${SRCROOT} for ${TAGS}\"\n\nfor TAG in ${TAGS[@]}; do\nfind \"${SRCROOT}/Subtitler\" \\( -name \"*.swift\" -or -name \"*.m\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAG).*\\$\" | perl -p -e \"s/($TAG)/ warning: \\$1/\"\ndone\n";
-		};
-		BB8A73F0AA7F023FC3296212 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Subtitler/Pods-Subtitler-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6E511B5F1B77C27B7515B70 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SubtitlerTests/Pods-SubtitlerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SubtitlerTests/Pods-SubtitlerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SubtitlerTests/Pods-SubtitlerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -573,7 +471,6 @@
 		};
 		974FAA832703223C008B539B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D663F687E9DBD75298B2755 /* Pods-Subtitler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -604,7 +501,6 @@
 		};
 		974FAA842703223C008B539B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCFDB6466EDC7F8D71607D9F /* Pods-Subtitler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -635,12 +531,12 @@
 		};
 		97924986270351FA00248C3D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73CB8A47F25EBCBAEB6A4E74 /* Pods-SubtitlerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -660,7 +556,6 @@
 		};
 		97924987270351FA00248C3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39D0BC9E388B258073C3BCC7 /* Pods-SubtitlerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -714,6 +609,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		970B47312B934E1A00A25FDC /* XCRemoteSwiftPackageReference "Difference" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Difference.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		970B47342B934E3500A25FDC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		970B47322B934E1A00A25FDC /* Difference */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 970B47312B934E1A00A25FDC /* XCRemoteSwiftPackageReference "Difference" */;
+			productName = Difference;
+		};
+		970B47352B934E3500A25FDC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 970B47342B934E3500A25FDC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 974FAA682703223B008B539B /* Project object */;
 }

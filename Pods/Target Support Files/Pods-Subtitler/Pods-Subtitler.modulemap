@@ -1,6 +1,0 @@
-framework module Pods_Subtitler {
-  umbrella header "Pods-Subtitler-umbrella.h"
-
-  export *
-  module * { export * }
-}

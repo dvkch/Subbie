@@ -1,6 +1,0 @@
-framework module Pods_SubtitlerTests {
-  umbrella header "Pods-SubtitlerTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
