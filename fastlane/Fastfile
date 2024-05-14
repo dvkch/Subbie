@@ -1,0 +1,49 @@
+default_platform :ios
+
+platform :ios do
+
+    desc "Create signing certs and provisioning profiles if needed"
+    lane :signing do
+        app = "me.syan.Subbie"
+
+        cert(team_id: "79RY8264V4", development: true)
+        sigh(team_id: "79RY8264V4", app_identifier: app, platform: "macos", development: true, force: true)
+
+        cert(team_id: "79RY8264V4")
+        sigh(team_id: "79RY8264V4", app_identifier: app, platform: "macos", force: true)
+    
+        system "rm ../*.provisionprofile"
+        system "rm ../*.mobileprovision"
+        system "rm ../*.cer"
+        system "rm ../*.p12"
+        system "rm ../*.certSigningRequest"
+    end
+
+    def promptIncrementBuild
+        if UI.confirm("Do you want to increase the build number before building the apps?")
+            increment_build_number
+        end
+    end
+
+    desc "Submit a new build"
+    lane :beta do
+        promptIncrementBuild
+
+        build_app(
+            scheme: "Subbie",
+            output_directory: "./build",
+            skip_profile_detection: true,
+            export_method: "app-store",
+            export_options: {
+                method: "app-store",
+                signingCertificate: "Apple Distribution",
+                provisioningProfiles: {
+                    "me.syan.Subbie" => "me.syan.Subbie AppStore"
+                }
+            }
+        )
+        upload_to_testflight(
+            skip_waiting_for_build_processing: true,
+        )
+    end
+end
