@@ -16,6 +16,9 @@
 		9728DADE2BF3916200EB4FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9728DAD72BF3916200EB4FA2 /* Main.storyboard */; };
 		9728DAE02BF3916200EB4FA2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9728DADC2BF3916200EB4FA2 /* Strings.swift */; };
 		9728DAE32BF3998200EB4FA2 /* NSMenu+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9728DAE22BF3998200EB4FA2 /* NSMenu+SY.swift */; };
+		9728DAE62BF3D74400EB4FA2 /* DSWaveformImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9728DAE52BF3D74400EB4FA2 /* DSWaveformImage */; };
+		9728DAE82BF3D74400EB4FA2 /* DSWaveformImageViews in Frameworks */ = {isa = PBXBuildFile; productRef = 9728DAE72BF3D74400EB4FA2 /* DSWaveformImageViews */; };
+		9728DAED2BF3FEBC00EB4FA2 /* NSScrollView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9728DAEC2BF3FEBC00EB4FA2 /* NSScrollView+SY.swift */; };
 		972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6A27032591005E9C3D /* NSTableView+SY.swift */; };
 		972CAB7327032591005E9C3D /* TimingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6E27032591005E9C3D /* TimingButton.swift */; };
 		972CAB7427032591005E9C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB7027032591005E9C3D /* ViewController.swift */; };
@@ -52,6 +55,7 @@
 		9728DADA2BF3916200EB4FA2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9728DADC2BF3916200EB4FA2 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9728DAE22BF3998200EB4FA2 /* NSMenu+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenu+SY.swift"; sourceTree = "<group>"; };
+		9728DAEC2BF3FEBC00EB4FA2 /* NSScrollView+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSScrollView+SY.swift"; sourceTree = "<group>"; };
 		972CAB6A27032591005E9C3D /* NSTableView+SY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTableView+SY.swift"; sourceTree = "<group>"; };
 		972CAB6E27032591005E9C3D /* TimingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingButton.swift; sourceTree = "<group>"; };
 		972CAB7027032591005E9C3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9728DAE82BF3D74400EB4FA2 /* DSWaveformImageViews in Frameworks */,
+				9728DAE62BF3D74400EB4FA2 /* DSWaveformImage in Frameworks */,
 				970B47362B934E3500A25FDC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +131,7 @@
 			children = (
 				9792498A2703802100248C3D /* Codable+SY.swift */,
 				9728DAE22BF3998200EB4FA2 /* NSMenu+SY.swift */,
+				9728DAEC2BF3FEBC00EB4FA2 /* NSScrollView+SY.swift */,
 				972CAB6A27032591005E9C3D /* NSTableView+SY.swift */,
 				97920DA92711C8D100D9F678 /* NSView+SY.swift */,
 			);
@@ -225,6 +232,8 @@
 			name = Subtitler;
 			packageProductDependencies = (
 				970B47352B934E3500A25FDC /* SnapKit */,
+				9728DAE52BF3D74400EB4FA2 /* DSWaveformImage */,
+				9728DAE72BF3D74400EB4FA2 /* DSWaveformImageViews */,
 			);
 			productName = Subtitler;
 			productReference = 974FAA702703223B008B539B /* Subtitler.app */;
@@ -283,6 +292,7 @@
 			packageReferences = (
 				970B47312B934E1A00A25FDC /* XCRemoteSwiftPackageReference "Difference" */,
 				970B47342B934E3500A25FDC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9728DAE42BF3D74400EB4FA2 /* XCRemoteSwiftPackageReference "DSWaveformImage" */,
 			);
 			productRefGroup = 974FAA712703223B008B539B /* Products */;
 			projectDirPath = "";
@@ -366,6 +376,7 @@
 				97924989270374C700248C3D /* PlayerControlsView.swift in Sources */,
 				9728DAE02BF3916200EB4FA2 /* Strings.swift in Sources */,
 				974FAA742703223B008B539B /* AppDelegate.swift in Sources */,
+				9728DAED2BF3FEBC00EB4FA2 /* NSScrollView+SY.swift in Sources */,
 				97DF3834270407F7002342CA /* SizingTextField.swift in Sources */,
 				972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */,
 				97DF38302703F8FE002342CA /* SubtitleView.swift in Sources */,
@@ -465,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -521,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -691,6 +702,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		9728DAE42BF3D74400EB4FA2 /* XCRemoteSwiftPackageReference "DSWaveformImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmrschmidt/DSWaveformImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -703,6 +722,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 970B47312B934E1A00A25FDC /* XCRemoteSwiftPackageReference "Difference" */;
 			productName = Difference;
+		};
+		9728DAE52BF3D74400EB4FA2 /* DSWaveformImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9728DAE42BF3D74400EB4FA2 /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
+			productName = DSWaveformImage;
+		};
+		9728DAE72BF3D74400EB4FA2 /* DSWaveformImageViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9728DAE42BF3D74400EB4FA2 /* XCRemoteSwiftPackageReference "DSWaveformImage" */;
+			productName = DSWaveformImageViews;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

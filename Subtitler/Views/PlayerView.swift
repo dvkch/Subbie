@@ -11,6 +11,8 @@ import SnapKit
 protocol PlayerViewDelegate: NSObjectProtocol {
     func playerViewPlayingStatusChanged(_ playerView: PlayerView, playingStatus: Bool)
     func playerViewRequestsSubtitle(_ playerView: PlayerView, time: TimeInterval) -> String?
+    func playerViewCurrentItemChanged(_ playerView: PlayerView, url: URL?, duration: TimeInterval?)
+    func playerViewPositionChanged(_ playerView: PlayerView, position: TimeInterval)
 }
 
 class PlayerView: AVPlayerView {
@@ -87,13 +89,16 @@ class PlayerView: AVPlayerView {
     // MARK: Observers
     private var timeObserver: Any?
     private func addStatusObservers(to player: AVPlayer) {
+        player.addObserver(self, forKeyPath: #keyPath(AVPlayer.currentItem.duration), options: .new, context: nil)
         player.addObserver(self, forKeyPath: #keyPath(AVPlayer.rate), options: .new, context: nil)
         timeObserver = player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 0.1, preferredTimescale: CMTimeScale(NSEC_PER_SEC)), queue: .main) { time in
             self.subtitleView.text = self.playerDelegate?.playerViewRequestsSubtitle(self, time: time.seconds)
+            self.playerDelegate?.playerViewPositionChanged(self, position: time.seconds)
         }
     }
 
     private func removeStatusObservers(from player: AVPlayer) {
+        player.removeObserver(self, forKeyPath: #keyPath(AVPlayer.currentItem.duration), context: nil)
         player.removeObserver(self, forKeyPath: #keyPath(AVPlayer.rate), context: nil)
         if let timeObserver = timeObserver {
             player.removeTimeObserver(timeObserver)
@@ -101,6 +106,14 @@ class PlayerView: AVPlayerView {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == #keyPath(AVPlayer.currentItem.duration) {
+            DispatchQueue.main.async {
+                self.playerDelegate?.playerViewCurrentItemChanged(
+                    self, url: (self.player?.currentItem?.asset as? AVURLAsset)?.url, duration: self.player?.currentItem?.duration.seconds
+                )
+            }
+            return
+        }
         if keyPath == #keyPath(AVPlayer.rate) {
             DispatchQueue.main.async {
                 self.playerDelegate?.playerViewPlayingStatusChanged(self, playingStatus: self.isPlaying)

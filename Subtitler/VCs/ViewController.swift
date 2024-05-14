@@ -20,6 +20,7 @@ class ViewController: NSViewController {
         tableView.registerForDraggedTypes([subtitleLineKind])
         tableView.doubleAction = #selector(tableViewDoubleClicked(sender:))
         playerView.playerDelegate = self
+        spectralView.delegate = self
         playerControlsView.delegate = self
         timingButton.delegate = self
         
@@ -48,6 +49,7 @@ class ViewController: NSViewController {
     @IBOutlet private var tableView: NSTableView!
     @IBOutlet private var textfield: NSTextField!
     @IBOutlet private var playerView: PlayerView!
+    @IBOutlet private var spectralView: SpectralView!
     @IBOutlet private var playerControlsView: PlayerControlsView!
     @IBOutlet private var timingButton: PressButton!
     
@@ -83,7 +85,7 @@ class ViewController: NSViewController {
         panel.resolvesAliases = true
         panel.prompt = L10n.Dialog.OpenVideo.title
         panel.allowsMultipleSelection = false
-        panel.allowedFileTypes = ["mp4", "mov", "m4a", "mp3", "aac"]
+        panel.allowedContentTypes = [.movie, .mpeg4Movie, .video, .audio]
         panel.beginSheetModal(for: window) { response in
             if (response == .OK) {
                 self.videoURL = panel.url
@@ -182,7 +184,7 @@ class ViewController: NSViewController {
     // MARK: Content
     private func updateContent() {
         updateTableView()
-        updateVideoView()
+        updateSpectralAndVideoView()
         updateTimingButton()
     }
     
@@ -190,13 +192,14 @@ class ViewController: NSViewController {
         tableView.reloadData()
     }
     
-    private func updateVideoView() {
-        if let url = videoURL {
-            playerView.player = AVPlayer(url: url)
+    private func updateSpectralAndVideoView() {
+        if let videoURL {
+            playerView.player = AVPlayer(url: videoURL)
             playerView.preferredSpeed = playerControlsView.selectedSpeed
         } else {
             playerView.player = nil
         }
+        // spectral view will be updated via the playerView delegate once the item is loaded
     }
     
     private func updateTimingButton() {
@@ -238,6 +241,30 @@ extension ViewController: PlayerViewDelegate {
             return subtitle.lines[tableView.selectedRow].text
         }
         return subtitle.lines.first(where: { $0.timeStart <= time && time <= $0.timeEnd })?.text
+    }
+    
+    func playerViewCurrentItemChanged(_ playerView: PlayerView, url: URL?, duration: TimeInterval?) {
+        if let url, let duration {
+            spectralView.source = .init(url: url, duration: duration)
+        }
+        else {
+            spectralView.source = nil
+        }
+    }
+    
+    func playerViewPositionChanged(_ playerView: PlayerView, position: TimeInterval) {
+        spectralView.position = position
+    }
+}
+
+extension ViewController: SpectralViewDelegate {
+    func spectralView(_ spectralView: SpectralView, selectedPosition position: TimeInterval) {
+        if (playerView.player?.rate ?? 0) > 0 {
+            playerView.player?.pause()
+        }
+        let time = CMTime(value: Int64(position * 1000), timescale: 1000)
+        let precision = CMTime(value: 1, timescale: 100) // precise to 10ms
+        playerView.player?.seek(to: time, toleranceBefore: precision, toleranceAfter: precision)
     }
 }
 
