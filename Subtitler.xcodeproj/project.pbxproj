@@ -101,6 +101,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9728DAD42BF390A000EB4FA2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				974FAA792703223C008B539B /* Assets.xcassets */,
+				974FAA7B2703223C008B539B /* Main.storyboard */,
+				974FAA7F2703223C008B539B /* Subtitler.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		972CAB6927032591005E9C3D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,16 +174,14 @@
 		974FAA722703223B008B539B /* Subtitler */ = {
 			isa = PBXGroup;
 			children = (
+				9728DAD42BF390A000EB4FA2 /* Resources */,
 				972CAB6927032591005E9C3D /* Extensions */,
 				972CAB6B27032591005E9C3D /* Models */,
 				97027085270334F2001B5785 /* Controllers */,
 				972CAB6D27032591005E9C3D /* Views */,
 				972CAB6F27032591005E9C3D /* VCs */,
 				974FAA732703223B008B539B /* AppDelegate.swift */,
-				974FAA792703223C008B539B /* Assets.xcassets */,
-				974FAA7B2703223C008B539B /* Main.storyboard */,
 				974FAA7E2703223C008B539B /* Info.plist */,
-				974FAA7F2703223C008B539B /* Subtitler.entitlements */,
 			);
 			path = Subtitler;
 			sourceTree = "<group>";
@@ -491,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Subtitler/Subtitler.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Subtitler/Resources/Subtitler.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -522,7 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Subtitler/Subtitler.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Subtitler/Resources/Subtitler.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
