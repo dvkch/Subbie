@@ -10,8 +10,8 @@
 		9702708427032EA9001B5785 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9702708327032EA9001B5785 /* AppError.swift */; };
 		9702708727033502001B5785 /* DocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9702708627033502001B5785 /* DocumentController.swift */; };
 		97027089270339EC001B5785 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97027088270339EC001B5785 /* PlayerView.swift */; };
-		970B47332B934E1A00A25FDC /* Difference in Frameworks */ = {isa = PBXBuildFile; productRef = 970B47322B934E1A00A25FDC /* Difference */; };
 		970B47362B934E3500A25FDC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 970B47352B934E3500A25FDC /* SnapKit */; };
+		9728DAD32BF38B7E00EB4FA2 /* Difference in Frameworks */ = {isa = PBXBuildFile; productRef = 9728DAD22BF38B7E00EB4FA2 /* Difference */; };
 		972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6A27032591005E9C3D /* NSTableView+SY.swift */; };
 		972CAB7327032591005E9C3D /* TimingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6E27032591005E9C3D /* TimingButton.swift */; };
 		972CAB7427032591005E9C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB7027032591005E9C3D /* ViewController.swift */; };
@@ -72,7 +72,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				970B47362B934E3500A25FDC /* SnapKit in Frameworks */,
-				970B47332B934E1A00A25FDC /* Difference in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9728DAD32BF38B7E00EB4FA2 /* Difference in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +92,13 @@
 				9702708627033502001B5785 /* DocumentController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9728DAD12BF38B7E00EB4FA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		972CAB6927032591005E9C3D /* Extensions */ = {
@@ -141,6 +148,7 @@
 				974FAA722703223B008B539B /* Subtitler */,
 				97924980270351F900248C3D /* SubtitlerTests */,
 				974FAA712703223B008B539B /* Products */,
+				9728DAD12BF38B7E00EB4FA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,7 +205,6 @@
 			);
 			name = Subtitler;
 			packageProductDependencies = (
-				970B47322B934E1A00A25FDC /* Difference */,
 				970B47352B934E3500A25FDC /* SnapKit */,
 			);
 			productName = Subtitler;
@@ -218,6 +225,9 @@
 				97924984270351FA00248C3D /* PBXTargetDependency */,
 			);
 			name = SubtitlerTests;
+			packageProductDependencies = (
+				9728DAD22BF38B7E00EB4FA2 /* Difference */,
+			);
 			productName = SubtitlerTests;
 			productReference = 9792497F270351F900248C3D /* SubtitlerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -230,7 +240,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					974FAA6F2703223B008B539B = {
 						CreatedOnToolsVersion = 13.0;
@@ -485,7 +495,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -499,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.Subtitler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -516,7 +526,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -530,7 +540,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.Subtitler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -640,15 +650,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		970B47322B934E1A00A25FDC /* Difference */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 970B47312B934E1A00A25FDC /* XCRemoteSwiftPackageReference "Difference" */;
-			productName = Difference;
-		};
 		970B47352B934E3500A25FDC /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 970B47342B934E3500A25FDC /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		9728DAD22BF38B7E00EB4FA2 /* Difference */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 970B47312B934E1A00A25FDC /* XCRemoteSwiftPackageReference "Difference" */;
+			productName = Difference;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
