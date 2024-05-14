@@ -113,7 +113,7 @@ class Subtitle: NSDocument {
             selfTarget.removeLine(at: newLineIndex)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName(L10n.Action.addLine)
+        undoManager?.setActionName(L10n.Undo.addLine)
 
         return newLineIndex
     }
@@ -134,7 +134,7 @@ class Subtitle: NSDocument {
             selfTarget.updateText(for: lineIndex, text: previousText)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName(L10n.Action.updateText)
+        undoManager?.setActionName(L10n.Undo.updateText)
     }
     
     func updateTimings(for lineIndex: Int, start: TimeInterval, end: TimeInterval) {
@@ -151,7 +151,7 @@ class Subtitle: NSDocument {
             selfTarget.updateTimings(for: lineIndex, start: previousTimeStart, end: previousTimeEnd)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName(L10n.Action.updateTimings)
+        undoManager?.setActionName(L10n.Undo.updateTimings)
     }
     
     func offsetAllLines(delay: TimeInterval) {
@@ -167,7 +167,7 @@ class Subtitle: NSDocument {
             selfTarget.offsetAllLines(delay: -delay)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName(L10n.Action.offsetAllLines)
+        undoManager?.setActionName(L10n.Undo.offsetAllLines)
     }
 
     func move(from originalIndex: Int, to destinationIndex: Int) {
@@ -181,7 +181,7 @@ class Subtitle: NSDocument {
             selfTarget.move(from: destinationIndex, to: originalIndex)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName(L10n.Action.moveLine)
+        undoManager?.setActionName(L10n.Undo.moveLine)
     }
     
     func removeLine(at index: Int) {
@@ -195,6 +195,6 @@ class Subtitle: NSDocument {
             _ = selfTarget.add(line: removedLine.text, timingStart: removedLine.timeStart, timingEnd: removedLine.timeEnd)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName(L10n.Action.removeLine)
+        undoManager?.setActionName(L10n.Undo.removeLine)
     }
 }

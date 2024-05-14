@@ -8,13 +8,15 @@
 
 "action.cancel"             = "Cancel";
 "action.close"              = "Close";
-"action.add_line"           = "Add line";
-"action.update_text"        = "Update text";
-"action.update_timings"     = "Update timings";
-"action.offset_all_lines"   = "Offset all lines";
-"action.move_line"          = "Move line";
-"action.remove_line"        = "Remove line";
+"action.update_timing"      = "Update timing";
 "action.delay"              = "Delay";
+
+"undo.add_line"             = "Add a line";
+"undo.update_text"          = "Update text";
+"undo.update_timings"       = "Update timings";
+"undo.offset_all_lines"     = "Offset all lines";
+"undo.move_line"            = "Move line";
+"undo.remove_line"          = "Remove line";
 
 "error.invalid_file_type"       = "Invalid file type: %@";
 "error.invalid_timings_format"  = "Invalid timings format: %@";
@@ -27,3 +29,12 @@
 "dialog.open_video.title"           = "Open video file";
 "dialog.delay_subtitles.title"      = "Input a delay in seconds to offset all lines in this subtitles";
 "dialog.delay_subtitles.subtitle"   = "Use a minus (-) sign for a negative offset and a dot (.) as decimal separator";
+
+"input.placeholder"             = "Enter new line...";
+
+"menu.match_end_to_next_start"  = "Match end time to next item start time";
+"menu.delay_all_lines"          = "Delay all lines…";
+"menu.open_video"               = "Open associated video…";
+"menu.play_pause"               = "Play/Pause";
+"menu.seek_plus_5"              = "Advance 5 seconds";
+"menu.seek_minus_5"             = "Rewind 5 seconds";

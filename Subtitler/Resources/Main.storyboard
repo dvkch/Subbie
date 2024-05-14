@@ -123,12 +123,12 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="WRV-NI-Exz"/>
-                                        <menuItem title="Match end time to next item start time" keyEquivalent="M" id="J6y-m4-aDk">
+                                        <menuItem title="Match end time to next item start time" keyEquivalent="M" identifier="menu.match_end_to_next_start" id="J6y-m4-aDk">
                                             <connections>
                                                 <action selector="matchEndTimeToNextStartWithSender:" target="Ady-hI-5gd" id="DtH-9e-sWb"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Delay all lines..." keyEquivalent="D" id="8RG-lZ-uSo">
+                                        <menuItem title="Delay all lines..." keyEquivalent="D" identifier="menu.delay_all_lines" id="8RG-lZ-uSo">
                                             <connections>
                                                 <action selector="delaySubtitlesWithSender:" target="Ady-hI-5gd" id="E6m-hE-5os"/>
                                             </connections>
@@ -155,24 +155,24 @@ CA
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Video" id="HyV-fh-RgO">
                                     <items>
-                                        <menuItem title="Open associated video…" keyEquivalent="O" id="JDN-sZ-CkE">
+                                        <menuItem title="Open associated video…" keyEquivalent="O" identifier="menu.open_video" id="JDN-sZ-CkE">
                                             <connections>
                                                 <action selector="openVideoWithSender:" target="Ady-hI-5gd" id="ka5-nK-Ncl"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Play/Pause" keyEquivalent=" " id="snW-S8-Cw5">
+                                        <menuItem title="Play/Pause" keyEquivalent=" " identifier="menu.play_pause" id="snW-S8-Cw5">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="playPauseWithSender:" target="Ady-hI-5gd" id="8w4-L0-gqT"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Advance 5 seconds" keyEquivalent="" id="yaR-8i-S7s">
+                                        <menuItem title="Advance 5 seconds" keyEquivalent="" identifier="menu.seek_plus_5" id="yaR-8i-S7s">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="seekForwardWithSender:" target="Ady-hI-5gd" id="rQJ-Jd-uug"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Rewind 5 seconds" keyEquivalent="" id="xwu-Tx-85K">
+                                        <menuItem title="Rewind 5 seconds" keyEquivalent="" identifier="menu.seek_minus_5" id="xwu-Tx-85K">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="seekBackwardWithSender:" target="Ady-hI-5gd" id="hkO-Eh-OmW"/>
@@ -267,13 +267,13 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-1O-CVB">
-                                                <rect key="frame" x="0.0" y="46" width="380" height="253"/>
+                                                <rect key="frame" x="0.0" y="46" width="380" height="203"/>
                                                 <clipView key="contentView" id="bus-Px-5FW">
-                                                    <rect key="frame" x="1" y="1" width="378" height="251"/>
+                                                    <rect key="frame" x="1" y="1" width="378" height="201"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" tableStyle="fullWidth" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" usesAutomaticRowHeights="YES" headerView="IK9-0e-Sxy" viewBased="YES" id="8su-3M-rp4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="223"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="173"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -449,7 +449,7 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Ef-s8W" customClass="PlayerView" customModule="Subtitler" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="419" height="187"/>
+                                                <rect key="frame" x="0.0" y="112" width="419" height="137"/>
                                             </avPlayerView>
                                             <button springLoaded="YES" imageHugsTitle="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EV0-6E-XRp" customClass="PressButton" customModule="Subtitler" customModuleProvider="target">
                                                 <rect key="frame" x="2" y="2" width="415" height="40"/>

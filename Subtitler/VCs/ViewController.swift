@@ -22,6 +22,9 @@ class ViewController: NSViewController {
         playerView.playerDelegate = self
         playerControlsView.delegate = self
         timingButton.delegate = self
+        
+        textfield.placeholderString = L10n.Input.placeholder
+        timingButton.title = L10n.Action.updateTiming
     }
 
     override var representedObject: Any? {
@@ -47,7 +50,7 @@ class ViewController: NSViewController {
     @IBOutlet private var playerView: PlayerView!
     @IBOutlet private var playerControlsView: PlayerControlsView!
     @IBOutlet private var timingButton: PressButton!
-
+    
     // MARK: Table Actions
     @IBAction private func textfieldDidReturn(sender: AnyObject?) {
         let string = textfield.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)

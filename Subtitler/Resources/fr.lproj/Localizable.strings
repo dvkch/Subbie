@@ -8,13 +8,15 @@
 
 "action.cancel"             = "Annuler";
 "action.close"              = "Fermer";
-"action.add_line"           = "Ajouter une ligne";
-"action.update_text"        = "Mise à jour du texte";
-"action.update_timings"     = "Mise à jour du temps";
-"action.offset_all_lines"   = "Retarder les temps";
-"action.move_line"          = "Déplacer la ligne";
-"action.remove_line"        = "Supprimer la ligne";
+"action.update_timing"      = "Mettre à jour le temps";
 "action.delay"              = "Retarder";
+
+"undo.add_line"             = "Ajouter une ligne";
+"undo.update_text"          = "Mise à jour du texte";
+"undo.update_timings"       = "Mise à jour des temps";
+"undo.offset_all_lines"     = "Retarder les temps";
+"undo.move_line"            = "Déplacer la ligne";
+"undo.remove_line"          = "Supprimer la ligne";
 
 "error.invalid_file_type"       = "Format de fichier non supporté : %@";
 "error.invalid_timings_format"  = "Format de synchronisation non supporté : %@";
@@ -27,3 +29,12 @@
 "dialog.open_video.title"           = "Ouvrir une vidéo";
 "dialog.delay_subtitles.title"      = "Entrez un delais en secondes pour décaller toutes les lignes de ce sous titre";
 "dialog.delay_subtitles.subtitle"   = "Utilisez moins (-) pour un delais négatif et point (.) comme séparateur de décimales";
+
+"input.placeholder"             = "Enter new line...";
+
+"menu.match_end_to_next_start"  = "Déplacer le temps de fin au début de l'item suivant";
+"menu.delay_all_lines"          = "Décaller toutes les lignes…";
+"menu.open_video"               = "Ouvrir la vidéo associée…";
+"menu.play_pause"               = "Play/Pause";
+"menu.seek_plus_5"              = "Avancer de 5 secondes";
+"menu.seek_minus_5"             = "Reculer de 5 secondes";
