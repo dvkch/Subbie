@@ -42,7 +42,7 @@ class Subtitle: NSDocument {
             fileURL = nil
             fileType = "public.srt"
 
-        case "public.srt", "me.syan.subtitle":
+        case "public.srt":
             self.lines = try SubRipParser.parse(data: data)
             isTransient = false
 
@@ -53,7 +53,7 @@ class Subtitle: NSDocument {
 
     override func data(ofType typeName: String) throws -> Data {
         switch typeName {
-        case "public.srt", "me.syan.subtitle":
+        case "public.srt":
             return try SubRipParser.write(lines: lines)
 
         default:

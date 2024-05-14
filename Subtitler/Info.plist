@@ -39,14 +39,13 @@
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.plain-text</string>
-				<string>public.srt</string>
 			</array>
 			<key>UTTypeDescription</key>
 			<string>Subtitle file</string>
 			<key>UTTypeIcons</key>
 			<dict/>
 			<key>UTTypeIdentifier</key>
-			<string>me.syan.subtitle</string>
+			<string>public.srt</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
