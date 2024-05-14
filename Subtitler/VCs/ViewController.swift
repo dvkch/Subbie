@@ -78,7 +78,7 @@ class ViewController: NSViewController {
         panel.canChooseDirectories = false
         panel.canChooseFiles = true
         panel.resolvesAliases = true
-        panel.prompt = "Open video file"
+        panel.prompt = L10n.Dialog.OpenVideo.title
         panel.allowsMultipleSelection = false
         panel.allowedFileTypes = ["mp4", "mov", "m4a", "mp3", "aac"]
         panel.beginSheetModal(for: window) { response in
@@ -131,10 +131,10 @@ class ViewController: NSViewController {
     @IBAction private func delaySubtitles(sender: AnyObject?) {
         let alert = NSAlert()
 
-        let okButton = alert.addButton(withTitle: "Delay")
-        let cancelButton = alert.addButton(withTitle: "Cancel")
-        alert.messageText = "Input a delay in seconds to offset all lines in this subtitles"
-        alert.informativeText = "Use a minus (-) sign for a negative offset and a dot (.) as decimal separator"
+        let okButton = alert.addButton(withTitle: L10n.Action.delay)
+        let cancelButton = alert.addButton(withTitle: L10n.Action.cancel)
+        alert.messageText = L10n.Dialog.DelaySubtitles.title
+        alert.informativeText = L10n.Dialog.DelaySubtitles.subtitle
         
         let textField = NSTextField(frame: NSRect(x: 0, y: 0, width: 120, height: NSTextField().intrinsicContentSize.height))
         textField.stringValue = "0.000"

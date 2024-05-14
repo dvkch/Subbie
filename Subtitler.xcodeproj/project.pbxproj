@@ -12,6 +12,9 @@
 		97027089270339EC001B5785 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97027088270339EC001B5785 /* PlayerView.swift */; };
 		970B47362B934E3500A25FDC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 970B47352B934E3500A25FDC /* SnapKit */; };
 		9728DAD32BF38B7E00EB4FA2 /* Difference in Frameworks */ = {isa = PBXBuildFile; productRef = 9728DAD22BF38B7E00EB4FA2 /* Difference */; };
+		9728DADD2BF3916200EB4FA2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9728DAD52BF3916200EB4FA2 /* Localizable.strings */; };
+		9728DADE2BF3916200EB4FA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9728DAD72BF3916200EB4FA2 /* Main.storyboard */; };
+		9728DAE02BF3916200EB4FA2 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9728DADC2BF3916200EB4FA2 /* Strings.swift */; };
 		972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6A27032591005E9C3D /* NSTableView+SY.swift */; };
 		972CAB7327032591005E9C3D /* TimingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB6E27032591005E9C3D /* TimingButton.swift */; };
 		972CAB7427032591005E9C3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CAB7027032591005E9C3D /* ViewController.swift */; };
@@ -27,7 +30,6 @@
 		97A49D9827130B1A007844C8 /* SpectralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A49D9727130B1A007844C8 /* SpectralView.swift */; };
 		97DF38302703F8FE002342CA /* SubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF382F2703F8FE002342CA /* SubtitleView.swift */; };
 		97DF3834270407F7002342CA /* SizingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF3833270407F7002342CA /* SizingTextField.swift */; };
-		97FAA54F270326DE00684B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FAA7B2703223C008B539B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		9702708327032EA9001B5785 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		9702708627033502001B5785 /* DocumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentController.swift; sourceTree = "<group>"; };
 		97027088270339EC001B5785 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		9728DAD62BF3916200EB4FA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9728DAD72BF3916200EB4FA2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9728DADA2BF3916200EB4FA2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9728DADC2BF3916200EB4FA2 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		972CAB6A27032591005E9C3D /* NSTableView+SY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTableView+SY.swift"; sourceTree = "<group>"; };
 		972CAB6E27032591005E9C3D /* TimingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingButton.swift; sourceTree = "<group>"; };
 		972CAB7027032591005E9C3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +58,6 @@
 		974FAA732703223B008B539B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		974FAA772703223B008B539B /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		974FAA792703223C008B539B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		974FAA7C2703223C008B539B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		974FAA7E2703223C008B539B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		974FAA7F2703223C008B539B /* Subtitler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Subtitler.entitlements; sourceTree = "<group>"; };
 		97920DA92711C8D100D9F678 /* NSView+SY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+SY.swift"; sourceTree = "<group>"; };
@@ -105,7 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				974FAA792703223C008B539B /* Assets.xcassets */,
-				974FAA7B2703223C008B539B /* Main.storyboard */,
+				9728DAD52BF3916200EB4FA2 /* Localizable.strings */,
+				9728DAD72BF3916200EB4FA2 /* Main.storyboard */,
+				9728DADC2BF3916200EB4FA2 /* Strings.swift */,
 				974FAA7F2703223C008B539B /* Subtitler.entitlements */,
 			);
 			path = Resources;
@@ -203,6 +210,7 @@
 			buildConfigurationList = 974FAA822703223C008B539B /* Build configuration list for PBXNativeTarget "Subtitler" */;
 			buildPhases = (
 				972CAB75270325B4005E9C3D /* TODOs */,
+				9728DAE12BF3917900EB4FA2 /* SwiftGen */,
 				974FAA6C2703223B008B539B /* Sources */,
 				974FAA6D2703223B008B539B /* Frameworks */,
 				974FAA6E2703223B008B539B /* Resources */,
@@ -266,6 +274,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 974FAA672703223B008B539B;
 			packageReferences = (
@@ -287,8 +296,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9728DADE2BF3916200EB4FA2 /* Main.storyboard in Resources */,
 				974FAA7A2703223C008B539B /* Assets.xcassets in Resources */,
-				97FAA54F270326DE00684B3F /* Main.storyboard in Resources */,
+				9728DADD2BF3916200EB4FA2 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +313,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9728DAE12BF3917900EB4FA2 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Subtitler/Resources/en.lproj/Localizable.strings",
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Subtitler/Resources/Strings.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/opt/homebrew/bin/swiftgen\n";
+		};
 		972CAB75270325B4005E9C3D /* TODOs */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -331,6 +361,7 @@
 			files = (
 				9792497A2703473900248C3D /* SubRipParser.swift in Sources */,
 				97924989270374C700248C3D /* PlayerControlsView.swift in Sources */,
+				9728DAE02BF3916200EB4FA2 /* Strings.swift in Sources */,
 				974FAA742703223B008B539B /* AppDelegate.swift in Sources */,
 				97DF3834270407F7002342CA /* SizingTextField.swift in Sources */,
 				972CAB7127032591005E9C3D /* NSTableView+SY.swift in Sources */,
@@ -366,12 +397,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		974FAA7B2703223C008B539B /* Main.storyboard */ = {
+		9728DAD52BF3916200EB4FA2 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				974FAA7C2703223C008B539B /* Base */,
+				9728DAD62BF3916200EB4FA2 /* en */,
+				9728DADA2BF3916200EB4FA2 /* fr */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

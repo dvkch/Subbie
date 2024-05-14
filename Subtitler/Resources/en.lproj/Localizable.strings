@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Amby
+
+  Created by syan on 29/03/2024.
+  
+*/
+
+"action.cancel"             = "Cancel";
+"action.close"              = "Close";
+"action.add_line"           = "Add line";
+"action.update_text"        = "Update text";
+"action.update_timings"     = "Update timings";
+"action.offset_all_lines"   = "Offset all lines";
+"action.move_line"          = "Move line";
+"action.remove_line"        = "Remove line";
+"action.delay"              = "Delay";
+
+"error.invalid_file_type"       = "Invalid file type: %@";
+"error.invalid_timings_format"  = "Invalid timings format: %@";
+
+"contact.copy"      = "Copy email address to pasteboard";
+"contact.title"     = "Choose your messaging app";
+"contact.address"   = "contact@syan.me";
+"contact.subject"   = "About Amby %@ (%@)";
+
+"dialog.open_video.title"           = "Open video file";
+"dialog.delay_subtitles.title"      = "Input a delay in seconds to offset all lines in this subtitles";
+"dialog.delay_subtitles.subtitle"   = "Use a minus (-) sign for a negative offset and a dot (.) as decimal separator";

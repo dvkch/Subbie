@@ -8,6 +8,13 @@
 import Foundation
 
 enum AppError: LocalizedError {
-    case invalidFileType
-    case invalidTimingsFormat
+    case invalidFileType(String)
+    case invalidTimingsFormat(String)
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidFileType(let type): return L10n.Error.invalidFileType(type)
+        case .invalidTimingsFormat(let line): return L10n.Error.invalidTimingsFormat(line)
+        }
+    }
 }

@@ -9,6 +9,7 @@ import Cocoa
 import AVFAudio
 import AVFoundation
 
+// TODO: finish work on spectral audio view
 // https://betterprogramming.pub/audio-visualization-in-swift-using-metal-accelerate-part-1-390965c095d7
 class SpectralView: NSView {
 

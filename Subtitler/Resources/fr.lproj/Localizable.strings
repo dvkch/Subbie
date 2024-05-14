@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Amby
+
+  Created by syan on 29/03/2024.
+  
+*/
+
+"action.cancel"             = "Annuler";
+"action.close"              = "Fermer";
+"action.add_line"           = "Ajouter une ligne";
+"action.update_text"        = "Mise à jour du texte";
+"action.update_timings"     = "Mise à jour du temps";
+"action.offset_all_lines"   = "Retarder les temps";
+"action.move_line"          = "Déplacer la ligne";
+"action.remove_line"        = "Supprimer la ligne";
+"action.delay"              = "Retarder";
+
+"error.invalid_file_type"       = "Format de fichier non supporté : %@";
+"error.invalid_timings_format"  = "Format de synchronisation non supporté : %@";
+
+"contact.copy"      = "Copier l'adresse email";
+"contact.title"     = "Choisissez votre application";
+"contact.address"   = "contact@syan.me";
+"contact.subject"   = "À propos de Amby %@ (%@)";
+
+"dialog.open_video.title"           = "Ouvrir une vidéo";
+"dialog.delay_subtitles.title"      = "Entrez un delais en secondes pour décaller toutes les lignes de ce sous titre";
+"dialog.delay_subtitles.subtitle"   = "Utilisez moins (-) pour un delais négatif et point (.) comme séparateur de décimales";

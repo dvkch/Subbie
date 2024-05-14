@@ -47,7 +47,7 @@ class Subtitle: NSDocument {
             isTransient = false
 
         default:
-            throw AppError.invalidFileType
+            throw AppError.invalidFileType(typeName)
         }
     }
 
@@ -57,7 +57,7 @@ class Subtitle: NSDocument {
             return try SubRipParser.write(lines: lines)
 
         default:
-            throw AppError.invalidFileType
+            throw AppError.invalidFileType(typeName)
         }
     }
 
@@ -113,7 +113,7 @@ class Subtitle: NSDocument {
             selfTarget.removeLine(at: newLineIndex)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName("Add line")
+        undoManager?.setActionName(L10n.Action.addLine)
 
         return newLineIndex
     }
@@ -134,7 +134,7 @@ class Subtitle: NSDocument {
             selfTarget.updateText(for: lineIndex, text: previousText)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName("Update text")
+        undoManager?.setActionName(L10n.Action.updateText)
     }
     
     func updateTimings(for lineIndex: Int, start: TimeInterval, end: TimeInterval) {
@@ -151,7 +151,7 @@ class Subtitle: NSDocument {
             selfTarget.updateTimings(for: lineIndex, start: previousTimeStart, end: previousTimeEnd)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName("Update timings")
+        undoManager?.setActionName(L10n.Action.updateTimings)
     }
     
     func offsetAllLines(delay: TimeInterval) {
@@ -167,7 +167,7 @@ class Subtitle: NSDocument {
             selfTarget.offsetAllLines(delay: -delay)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName("Offset all lines")
+        undoManager?.setActionName(L10n.Action.offsetAllLines)
     }
 
     func move(from originalIndex: Int, to destinationIndex: Int) {
@@ -181,7 +181,7 @@ class Subtitle: NSDocument {
             selfTarget.move(from: destinationIndex, to: originalIndex)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName("Move line")
+        undoManager?.setActionName(L10n.Action.moveLine)
     }
     
     func removeLine(at index: Int) {
@@ -195,6 +195,6 @@ class Subtitle: NSDocument {
             _ = selfTarget.add(line: removedLine.text, timingStart: removedLine.timeStart, timingEnd: removedLine.timeEnd)
             selfTarget.contentViewController?.updateTableView()
         })
-        undoManager?.setActionName("Remove line")
+        undoManager?.setActionName(L10n.Action.removeLine)
     }
 }

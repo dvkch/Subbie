@@ -1,0 +1,6 @@
+strings:
+  inputs: 
+    - Subtitler/Resources/en.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: Subtitler/Resources/Strings.swift

@@ -42,7 +42,7 @@ struct SubRipParser {
                     .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
 
                 if timingStrings.count != 2 {
-                    throw AppError.invalidTimingsFormat
+                    throw AppError.invalidTimingsFormat(sourceLine)
                 }
 
                 currentLineTimings = (
@@ -109,7 +109,7 @@ struct SubRipParser {
     private static func timestamp(from string: String) throws -> TimeInterval {
         let parts = string.components(separatedBy: CharacterSet(charactersIn: ":,"))
         if parts.count != 4 {
-            throw AppError.invalidTimingsFormat
+            throw AppError.invalidTimingsFormat(string)
         }
         
         let doubleParts: [Double] = parts.map { Double($0)! }
