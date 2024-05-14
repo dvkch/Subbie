@@ -1,6 +1,6 @@
 <img src="Resources/README-AppIcon.png" width=64 />
 
-# Subtitler
+# Subbie
 
 Quick and dirty native macOS clone of DivXLand Media Subtitler.
 
