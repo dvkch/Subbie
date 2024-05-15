@@ -26,6 +26,10 @@
 "contact.address"   = "contact@syan.me";
 "contact.subject"   = "About Amby %@ (%@)";
 
+"column.text"   = "Text";
+"column.start"  = "Start";
+"column.end"    = "End";
+
 "dialog.open_video.title"           = "Open video file";
 "dialog.delay_subtitles.title"      = "Input a delay in seconds to offset all lines in this subtitles";
 "dialog.delay_subtitles.subtitle"   = "Use a minus (-) sign for a negative offset and a dot (.) as decimal separator";

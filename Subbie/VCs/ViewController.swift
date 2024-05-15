@@ -16,15 +16,19 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         representedObject = representedObject ?? Subtitle()
+
         tableView.registerForDraggedTypes([subtitleLineKind])
         tableView.doubleAction = #selector(tableViewDoubleClicked(sender:))
+        tableView.tableColumns[0].headerCell.title = L10n.Column.text
+        tableView.tableColumns[1].headerCell.title = L10n.Column.start
+        tableView.tableColumns[2].headerCell.title = L10n.Column.end
+        textfield.placeholderString = L10n.Input.placeholder
+
         playerView.playerDelegate = self
         spectralView.delegate = self
         playerControlsView.delegate = self
         timingButton.delegate = self
-        
-        textfield.placeholderString = L10n.Input.placeholder
-        timingButton.title = L10n.Action.updateTiming
+        timingButton.title = " " + L10n.Action.updateTiming
     }
 
     override var representedObject: Any? {

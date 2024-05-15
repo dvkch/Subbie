@@ -26,6 +26,10 @@
 "contact.address"   = "contact@syan.me";
 "contact.subject"   = "À propos de Amby %@ (%@)";
 
+"column.text"   = "Texte";
+"column.start"  = "Début";
+"column.end"    = "Fin";
+
 "dialog.open_video.title"           = "Ouvrir une vidéo";
 "dialog.delay_subtitles.title"      = "Entrez un delais en secondes pour décaller toutes les lignes de ce sous titre";
 "dialog.delay_subtitles.subtitle"   = "Utilisez moins (-) pour un delais négatif et point (.) comme séparateur de décimales";

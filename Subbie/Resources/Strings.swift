@@ -23,6 +23,14 @@ internal enum L10n {
     /// Update timing
     internal static let updateTiming = L10n.tr("Localizable", "action.update_timing", fallback: "Update timing")
   }
+  internal enum Column {
+    /// End
+    internal static let end = L10n.tr("Localizable", "column.end", fallback: "End")
+    /// Start
+    internal static let start = L10n.tr("Localizable", "column.start", fallback: "Start")
+    /// Text
+    internal static let text = L10n.tr("Localizable", "column.text", fallback: "Text")
+  }
   internal enum Contact {
     /// contact@syan.me
     internal static let address = L10n.tr("Localizable", "contact.address", fallback: "contact@syan.me")
