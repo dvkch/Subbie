@@ -29,6 +29,7 @@ class ViewController: NSViewController {
         playerControlsView.delegate = self
         timingButton.delegate = self
         timingButton.title = " " + L10n.Action.updateTiming
+        timingButton.imageScaling = .scaleProportionallyDown
     }
 
     override var representedObject: Any? {
