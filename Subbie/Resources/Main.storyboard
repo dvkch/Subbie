@@ -267,13 +267,13 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-1O-CVB">
-                                                <rect key="frame" x="0.0" y="46" width="380" height="203"/>
+                                                <rect key="frame" x="0.0" y="87" width="380" height="153"/>
                                                 <clipView key="contentView" id="bus-Px-5FW">
-                                                    <rect key="frame" x="1" y="1" width="378" height="201"/>
+                                                    <rect key="frame" x="1" y="1" width="378" height="151"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" tableStyle="fullWidth" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" usesAutomaticRowHeights="YES" headerView="IK9-0e-Sxy" viewBased="YES" id="8su-3M-rp4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="173"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="123"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -420,7 +420,7 @@ CA
                                                 </tableHeaderView>
                                             </scrollView>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zCx-QZ-uze">
-                                                <rect key="frame" x="8" y="8" width="364" height="30"/>
+                                                <rect key="frame" x="8" y="8" width="364" height="71"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="5ok-jJ-9v5"/>
                                                 </constraints>
@@ -449,7 +449,7 @@ CA
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <avPlayerView controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Ef-s8W" customClass="PlayerView" customModule="Subbie" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="240" width="419" height="9"/>
+                                                <rect key="frame" x="0.0" y="240" width="419" height="0.0"/>
                                             </avPlayerView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Upu-O2-ry7" customClass="SpectralView" customModule="Subbie" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="112" width="419" height="120"/>

@@ -19,6 +19,8 @@ Currently supported features:
 - showing the subtitle preview while playing the associated video
 - select a playback speed for the associated video
 - delay all lines using a fixed offset
+- view audio waveform
+- move in time by clicking/dragging in the waveform
 
 Planned features, if time permits:
 
