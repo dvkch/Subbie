@@ -24,4 +24,15 @@ extension NSView {
     private var uniqueID: UnsafeMutableRawPointer {
         return Unmanaged.passUnretained(self).toOpaque()
     }
+    
+    func hasAncestor<T: NSView>(of kind: T.Type) -> Bool {
+        var view: NSView? = self
+        while view != nil {
+            if view is T {
+                return true
+            }
+            view = view?.superview
+        }
+        return false
+    }
 }

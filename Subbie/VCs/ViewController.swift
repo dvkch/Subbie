@@ -210,6 +210,11 @@ class ViewController: NSViewController {
         playerControlsView.isEnabled = playerView.player != nil
         timingButton.isEnabled = playerView.player != nil && tableView.selectedRow >= 0 && playerView.isPlaying
     }
+    
+    // MARK: Edition
+    private var isEditing: Bool {
+        (view.window?.firstResponder as? NSView)?.hasAncestor(of: NSTextView.self) == true || textfield.currentEditor() != nil
+    }
 }
 
 extension ViewController: NSMenuItemValidation {
@@ -220,11 +225,11 @@ extension ViewController: NSMenuItemValidation {
         case #selector(openVideo(sender:)):
             return true
         case #selector(playPause(sender:)):
-            return playerView.player != nil && textfield.currentEditor() == nil
+            return playerView.player != nil && !isEditing
         case #selector(seekForward(sender:)):
-            return playerView.player != nil && textfield.currentEditor() == nil
+            return playerView.player != nil && !isEditing
         case #selector(seekBackward(sender:)):
-            return playerView.player != nil && textfield.currentEditor() == nil
+            return playerView.player != nil && !isEditing
         case #selector(removeLine(sender:)):
             return tableView.selectedRow >= 0
         case #selector(matchEndTimeToNextStart(sender:)):
