@@ -42,6 +42,7 @@ class SpectralView: NSView {
             make.edges.equalToSuperview()
         }
         
+        clipView.backgroundColor = .windowBackgroundColor
         scrollView.contentView = clipView
         clipView.snp.makeConstraints { make in
             make.edges.equalTo(scrollView)
@@ -95,7 +96,7 @@ class SpectralView: NSView {
         
         guard let source else { return }
         
-        let waveformView = WaveformView(audioURL: source.url, configuration: .init(style: .filled(.white)), renderer: LinearWaveformRenderer())
+        let waveformView = WaveformView(audioURL: source.url, configuration: .init(style: .filled(.labelColor)), renderer: LinearWaveformRenderer())
         let hostingView = NSHostingView(rootView: waveformView)
         hostingView.frame = .init(x: 0, y: 0, width: 100, height: 100)
         documentView.addSubview(hostingView, positioned: .below, relativeTo: progressView)
