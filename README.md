@@ -29,7 +29,7 @@ Planned features, if time permits:
 
 ## Demo
 
-https://user-images.githubusercontent.com/1838148/135199687-81f0e2f6-8137-4d1b-a505-57c21a7ed962.mp4
+https://github.com/dvkch/Subbie/assets/1838148/65a271d0-7d16-40b2-aba6-3a3461f9d89c
 
 ## Disclaimer
 
