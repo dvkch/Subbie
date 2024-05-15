@@ -8,6 +8,7 @@ Quick and dirty native macOS clone of DivXLand Media Subtitler.
 
 Currently supported features:
 
+- available in FR and EN
 - importing a text file
 - reading existing SRT
 - saving to SRT
@@ -24,7 +25,6 @@ Currently supported features:
 
 Planned features, if time permits:
 
-- localize the app in FR and EN
 - allow manually editing the timings as text
 
 ## Demo
