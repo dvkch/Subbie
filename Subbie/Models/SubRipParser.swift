@@ -19,7 +19,7 @@ struct SubRipParser {
     }
     
     static func parse(data: Data) throws -> [Subtitle.Line] {
-        let sourceLines = String(data: data, encoding: .utf8)!
+        let sourceLines = (String(data: data, encoding: .utf8) ?? String(data: data, encoding: .ascii))!
             .replacingOccurrences(of: "\r\n", with: "\n")
             .split(separator: "\n", omittingEmptySubsequences: false)
             .map(String.init)
