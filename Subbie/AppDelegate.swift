@@ -12,6 +12,7 @@ import TelemetryDeck
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillFinishLaunching(_ notification: Notification) {
+        // TODO: send custom event when opening a file?
         let config = TelemetryDeck.Config(appID: "285716B0-6779-4C9D-B9C3-60F8C6AAE99C")
         TelemetryDeck.initialize(config: config)
 

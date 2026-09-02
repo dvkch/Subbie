@@ -43,4 +43,4 @@ Of course, feel free to report any bugs, with a reproducible example if possible
 
 ## License
 
-MIT, I guess?
+MPL-2.0
